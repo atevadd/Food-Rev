@@ -1,10 +1,12 @@
 <template>
   <aside class="app__sidebar">
+    <!-- App Logo -->
     <div class="app__logo">
       <router-link to="/"
         >Food<span class="app__logo-dot">.</span>Rev</router-link
       >
     </div>
+    <!-- App Navigation -->
     <nav class="app__nav">
       <ul>
         <li>
@@ -27,7 +29,7 @@
         </li>
       </ul>
     </nav>
-
+    <!-- App Theme changer -->
     <div class="app__theme">
       <span class="theme theme-light"><i class="uil uil-sun"></i> Light</span>
       <span class="theme theme-dark"><i class="uil uil-moon"></i> Dark</span>
@@ -39,24 +41,42 @@
 
 <style lang="scss" scoped>
 .app__sidebar {
-  height: 100%;
-  border-right: 1px solid #ccc;
+  @include mobile {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: max-content;
+    padding: 12px 20px;
+    border-bottom: 1px solid #ccc;
+    background-color: $color-white;
+    z-index: 99;
+  }
 
   @include desktop {
-    position: relative;
+    position: sticky;
+    top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh;
+    border-right: 1px solid #ccc;
   }
 }
 .app__logo {
   color: $color-primary;
+
+  @include mobile {
+    font-size: 1.4rem;
+    font-family: $dm-serif;
+    font-weight: 800;
+  }
   @include desktop {
     width: 70%;
     font-size: 2rem;
     font-family: $dm-serif;
     font-weight: 800;
-    // text-align: center;
     margin-top: 10px;
   }
 
@@ -70,14 +90,34 @@
 }
 
 .app__nav {
-  margin-top: 70px;
-  width: 80%;
+  @include desktop {
+    margin-top: 70px;
+    width: 80%;
+  }
+  @include mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: 0 3px 13px rgba($color: #000000, $alpha: 0.2);
+    background-color: $color-white;
+    z-index: 99;
+  }
 
   ul {
     list-style-type: none;
 
+    @include mobile {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
     li {
-      margin-bottom: 30px;
+      @include desktop {
+        margin-bottom: 30px;
+      }
 
       a {
         @include desktop {
@@ -101,14 +141,26 @@
           }
         }
         @include mobile {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.8rem;
+          line-height: 1.5;
+
           &.router-link-exact-active {
             color: $color-primary;
-            color: $color-white;
           }
         }
 
         i {
-          margin-right: 15px;
+          @include desktop {
+            margin-right: 15px;
+          }
+          @include mobile {
+            font-size: 1.3rem;
+            line-height: 0;
+          }
         }
       }
     }
@@ -116,6 +168,27 @@
 }
 
 .app__theme {
+  @include mobile {
+    .theme {
+      border-radius: 10px;
+      padding: 5px 10px;
+      background-color: rgba($color: #000, $alpha: 0.2);
+      font-size: 0.8rem;
+
+      &:hover {
+        background-color: rgba($color: #000, $alpha: 0.4);
+      }
+
+      i {
+        display: inline-block;
+        margin-right: 7px;
+      }
+    }
+
+    .theme-dark {
+      display: none;
+    }
+  }
   @include desktop {
     margin-top: auto;
     margin-bottom: 30px;
@@ -128,6 +201,11 @@
 
       &:hover {
         background-color: rgba($color: #000, $alpha: 0.4);
+      }
+
+      i {
+        display: inline-block;
+        margin-right: 7px;
       }
     }
 

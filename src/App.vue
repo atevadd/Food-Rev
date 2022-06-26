@@ -17,14 +17,19 @@ import AppSidebar from "@/components/layout/AppSidebar.vue";
 
 .app__content {
   width: 100%;
-  min-height: 100vh;
-  position: relative;
+
+  // position: relative;
   display: grid;
 
   @include desktop {
     grid-template-columns: minmax(0, 15%) minmax(0, 85%);
+    min-height: 100vh;
+    align-items: flex-start;
   }
   @include tablet {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  @include mobile {
     grid-template-columns: minmax(0, 1fr);
   }
 }
