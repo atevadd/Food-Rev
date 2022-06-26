@@ -53,6 +53,18 @@
     background-color: $color-white;
     z-index: 99;
   }
+  @include tablet {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: max-content;
+    padding: 12px 20px;
+    border-bottom: 1px solid #ccc;
+    background-color: $color-white;
+    z-index: 99;
+  }
 
   @include desktop {
     position: sticky;
@@ -68,6 +80,11 @@
   color: $color-primary;
 
   @include mobile {
+    font-size: 1.4rem;
+    font-family: $dm-serif;
+    font-weight: 800;
+  }
+  @include tablet {
     font-size: 1.4rem;
     font-family: $dm-serif;
     font-weight: 800;
@@ -90,10 +107,6 @@
 }
 
 .app__nav {
-  @include desktop {
-    margin-top: 70px;
-    width: 80%;
-  }
   @include mobile {
     position: fixed;
     bottom: 0;
@@ -104,11 +117,30 @@
     background-color: $color-white;
     z-index: 99;
   }
+  @include tablet {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: 0 3px 13px rgba($color: #000000, $alpha: 0.2);
+    background-color: $color-white;
+    z-index: 99;
+  }
+  @include desktop {
+    margin-top: 70px;
+    width: 80%;
+  }
 
   ul {
     list-style-type: none;
 
     @include mobile {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    @include tablet {
       display: flex;
       align-items: center;
       justify-content: space-evenly;
@@ -140,6 +172,18 @@
             }
           }
         }
+        @include tablet {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.8rem;
+          line-height: 1.5;
+
+          &.router-link-exact-active {
+            color: $color-primary;
+          }
+        }
         @include mobile {
           display: flex;
           flex-direction: column;
@@ -154,12 +198,16 @@
         }
 
         i {
-          @include desktop {
-            margin-right: 15px;
-          }
           @include mobile {
             font-size: 1.3rem;
             line-height: 0;
+          }
+          @include tablet {
+            font-size: 1.3rem;
+            line-height: 0;
+          }
+          @include desktop {
+            margin-right: 15px;
           }
         }
       }
@@ -169,6 +217,27 @@
 
 .app__theme {
   @include mobile {
+    .theme {
+      border-radius: 10px;
+      padding: 5px 10px;
+      background-color: rgba($color: #000, $alpha: 0.2);
+      font-size: 0.8rem;
+
+      &:hover {
+        background-color: rgba($color: #000, $alpha: 0.4);
+      }
+
+      i {
+        display: inline-block;
+        margin-right: 7px;
+      }
+    }
+
+    .theme-dark {
+      display: none;
+    }
+  }
+  @include tablet {
     .theme {
       border-radius: 10px;
       padding: 5px 10px;

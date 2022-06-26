@@ -9,14 +9,14 @@
 
 // tablet breakpoint
 @mixin tablet {
-  @media screen and (min-width: 600px) and (max-width: 959px) {
+  @media screen and (min-width: 600px) and (max-width: 1024px) {
     @content;
   }
 }
 
 // desktop breakpoint
 @mixin desktop {
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1025px) {
     @content;
   }
 }
