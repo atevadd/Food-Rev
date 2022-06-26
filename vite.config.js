@@ -9,9 +9,9 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: `
-              @import "@/scss/abstracts/_animations.scss";
-              @import "@/scss/abstracts/_variables.scss";
-              @import "@/scss/abstracts/_mixins.scss";
+              @import "@/assets/scss/abstracts/_animations.scss";
+              @import "@/assets/scss/abstracts/_variables.scss";
+              @import "@/assets/scss/abstracts/_mixins.scss";
             `,
       },
     },

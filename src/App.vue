@@ -5,7 +5,9 @@ import AppSidebar from "@/components/layout/AppSidebar.vue";
 
 <template>
   <div class="app__content">
+    <!-- App Sidebar -->
     <AppSidebar />
+    <!-- Main content -->
     <main class="app__inner-content">
       <RouterView />
     </main>
@@ -13,7 +15,7 @@ import AppSidebar from "@/components/layout/AppSidebar.vue";
 </template>
 
 <style lang="scss">
-@import "@/scss/main.scss";
+@import "@/assets/scss/main.scss";
 
 .app__content {
   width: 100%;
