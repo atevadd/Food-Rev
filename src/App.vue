@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
 import AppSidebar from "@/components/layout/AppSidebar.vue";
+import AppFooter from "@/components/layout/AppFooter.vue";
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import AppSidebar from "@/components/layout/AppSidebar.vue";
     <!-- Main content -->
     <main class="app__inner-content">
       <RouterView />
+      <!-- <AppFooter /> -->
     </main>
   </div>
 </template>
@@ -34,5 +36,11 @@ import AppSidebar from "@/components/layout/AppSidebar.vue";
   @include mobile {
     grid-template-columns: minmax(0, 1fr);
   }
+}
+
+.app__inner-content {
+  min-height: 100%;
+  // display: grid;
+  // grid-template-rows: 1fr auto;
 }
 </style>
