@@ -76,3 +76,9 @@ a {
 #__next {
   isolation: isolate;
 }
+
+:-internal-autofill-selected {
+        appearance: none;
+        background: none !important;
+        background-color: transparent !important;
+      }
