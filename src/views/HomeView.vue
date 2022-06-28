@@ -1,11 +1,13 @@
 <script setup>
 import BlogPostSkeleton from "../components/loaders/BlogPostSkeleton.vue";
 import { ref } from "vue";
+import LoadMore from "../components/loaders/LoadMore.vue";
 </script>
 
 <template>
   <div class="main__content">
     <BlogPostSkeleton />
+    <LoadMore />
   </div>
 </template>
 

@@ -41,7 +41,12 @@ import AppFooter from "@/components/layout/AppFooter.vue";
 .app__inner-content {
   position: relative;
   min-height: 100%;
-  // display: grid;
-  // grid-template-rows: 1fr auto;
+
+  @include mobile {
+    margin-bottom: 50px;
+  }
+  @include tablet {
+    margin-bottom: 50px;
+  }
 }
 </style>
