@@ -1,6 +1,8 @@
 <template>
+  <!-- Empty State -->
   <div class="empty">
     <div class="empty__container">
+      <!-- Empty sate Images -->
       <img src="@/assets/images/empty.svg" alt="empty state" />
       <h1>No blog post to show</h1>
       <p>
@@ -11,7 +13,15 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const props = defineProps({
+  heading: {
+    type: String.apply,
+    required: false,
+    default: "Empty",
+  },
+});
+</script>
 
 <style lang="scss" scoped>
 .empty {
@@ -21,7 +31,7 @@
   justify-content: center;
 
   @include mobile {
-    min-height: 80vh;
+    min-height: 70vh;
   }
   @include tablet {
     min-height: 80vh;
