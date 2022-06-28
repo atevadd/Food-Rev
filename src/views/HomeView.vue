@@ -2,12 +2,14 @@
 import BlogPostSkeleton from "../components/loaders/BlogPostSkeleton.vue";
 import { ref } from "vue";
 import LoadMore from "../components/loaders/LoadMore.vue";
+import EmptyState from "../components/EmptyState.vue";
 </script>
 
 <template>
   <div class="main__content">
-    <BlogPostSkeleton />
-    <LoadMore />
+    <!-- <BlogPostSkeleton :amount="16" /> -->
+    <EmptyState />
+    <!-- <LoadMore /> -->
   </div>
 </template>
 

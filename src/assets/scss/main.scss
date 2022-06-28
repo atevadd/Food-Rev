@@ -22,6 +22,36 @@ body {
   height: 100%;
   overflow-x: hidden;
   font-family: $sans;
+
+  --scroll-padding: 79px;
+  // customising the scrollbar for firefox
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: $color-primary transparent;
+  scroll-padding-top: var(--scroll-padding, 79px);
+
+  @include mobile {
+    --scroll-padding: 75px;
+    scroll-padding-top: var(--scroll-padding, 76px);
+  }
+
+  // Customising the scrollbar for chrome and other webkit browsers
+  &::-webkit-scrollbar {
+    width: 0.4vw;
+    cursor: pointer;
+
+    @include mobile {
+      width: 5px;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-secondary;
+  }
 }
 /*
   Typographic tweaks!
@@ -75,10 +105,4 @@ a {
 #root,
 #__next {
   isolation: isolate;
-}
-
-:-internal-autofill-selected {
-  appearance: none;
-  background: none !important;
-  background-color: transparent !important;
 }

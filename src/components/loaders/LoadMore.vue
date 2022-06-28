@@ -13,7 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  //   border: 1px solid;
+
   margin: 20px 0 30px;
 
   &__loadmore {
@@ -22,7 +22,7 @@
     border: 1px solid $color-border;
     border-radius: 50px;
     padding: 7px 20px;
-    color: #333;
+    color: #858585;
     font-size: 0.8rem;
     background-color: transparent;
     cursor: pointer;

@@ -1,6 +1,6 @@
 <template>
   <div class="skeleton">
-    <div class="skeleton__card" v-for="card in 8" :key="card">
+    <div class="skeleton__card" v-for="card in amount" :key="card">
       <div class="img"></div>
       <div class="title"></div>
       <div class="content content-1"></div>
@@ -11,7 +11,15 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const props = defineProps({
+  amount: {
+    type: Number,
+    required: false,
+    default: 8,
+  },
+});
+</script>
 
 <style lang="scss" scoped>
 .skeleton {

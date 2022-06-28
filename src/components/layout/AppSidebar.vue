@@ -222,6 +222,7 @@
       padding: 5px 10px;
       background-color: rgba($color: #000, $alpha: 0.2);
       font-size: 0.8rem;
+      cursor: pointer;
 
       &:hover {
         background-color: rgba($color: #000, $alpha: 0.4);
