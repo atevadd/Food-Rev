@@ -13,15 +13,7 @@
   </div>
 </template>
 
-<script setup>
-const props = defineProps({
-  heading: {
-    type: String.apply,
-    required: false,
-    default: "Empty",
-  },
-});
-</script>
+<script setup></script>
 
 <style lang="scss" scoped>
 .empty {
