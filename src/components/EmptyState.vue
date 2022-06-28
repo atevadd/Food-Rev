@@ -48,8 +48,15 @@
     h1 {
       margin: 25px 0 5px;
       font-size: 1.8rem;
+
+      @include mobile {
+        font-size: 1.5rem;
+      }
     }
     p {
+      @include mobile {
+        font-size: 0.9rem;
+      }
       color: lighten($color: #333, $amount: 15%);
     }
   }
