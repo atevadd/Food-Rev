@@ -10,13 +10,15 @@ import LoadMore from "../components/ui/LoadMore.vue";
 
 <template>
   <div class="main__content">
+    <!-- All the blog on the app -->
     <div class="blog-container">
       <BlogPostCard v-for="card in 12" :key="card" />
     </div>
+    <!-- The load more button -->
     <LoadMore />
     <app-modal class="get-started">
       <h1>Hi👋🏽, let's get you started</h1>
-      <p clal>
+      <p>
         A quick one before you start reading, help us know you by filling the
         form below.
       </p>

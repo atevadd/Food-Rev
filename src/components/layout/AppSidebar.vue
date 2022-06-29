@@ -22,11 +22,11 @@
             ><i class="uil uil-bookmark"></i>Bookmark</router-link
           >
         </li>
-        <li>
+        <!-- <li>
           <router-link to="/settings"
             ><i class="uil uil-setting"></i>Settings</router-link
           >
-        </li>
+        </li> -->
       </ul>
     </nav>
     <!-- App Theme changer -->

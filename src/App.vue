@@ -31,19 +31,22 @@ import AppFooter from "@/components/layout/AppFooter.vue";
   }
   @include tablet {
     grid-template-columns: minmax(0, 1fr);
+    min-height: 100%;
   }
   @include mobile {
     grid-template-columns: minmax(0, 1fr);
+    min-height: 100%;
   }
 }
 
 .app__inner-content {
   position: relative;
   min-height: 100%;
-  background-color: #f4f4f4;
+  // background-color: #f4f4f4;
 
   @include mobile {
     margin-bottom: 50px;
+    min-height: 90vh;
   }
   @include tablet {
     margin-bottom: 50px;

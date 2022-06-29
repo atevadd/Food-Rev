@@ -1,13 +1,17 @@
 import { defineStore } from "pinia";
+import { ref } from "vue";
 
 export const useStore = defineStore({
   id: "store",
   state: () => ({
     isLoaderActive: true,
     isModalActive: false,
+    searchResult: [1],
   }),
   getters: {
-    doubleCount: (state) => state.counter * 2,
+    getSearchResult() {
+      return this.searchResult;
+    },
   },
   actions: {
     // Close app Loader
