@@ -46,7 +46,7 @@ import AppFooter from "@/components/layout/AppFooter.vue";
 
   @include mobile {
     margin-bottom: 50px;
-    min-height: 90vh;
+    min-height: 80vh;
   }
   @include tablet {
     margin-bottom: 50px;

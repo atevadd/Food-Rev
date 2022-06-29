@@ -6,7 +6,7 @@ export const useStore = defineStore({
   state: () => ({
     isLoaderActive: true,
     isModalActive: false,
-    searchResult: [1],
+    searchResult: [],
   }),
   getters: {
     getSearchResult() {

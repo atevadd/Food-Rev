@@ -10,7 +10,7 @@
     <label for="search-bar"><i class="uil uil-search"></i></label>
   </div>
 
-  <div class="search-result" v-if="store.getSearchResult.length > 0">
+  <div class="search-result" v-if="searchText.length > 0">
     <h1>
       Results for <span>{{ searchText }}</span>
     </h1>
@@ -18,7 +18,10 @@
       <BlogPostCard v-for="card in 4" :key="card" />
     </div>
   </div>
-  <div class="search-empty-state" v-else>No result for now</div>
+  <div class="search-empty-state" v-else>
+    <h3>Reach searches</h3>
+    <p>You have no recent searches</p>
+  </div>
 </template>
 
 <script setup>
@@ -117,6 +120,28 @@ h1 {
 
   span {
     color: darken($color: $color-text-heading, $amount: 10%);
+  }
+}
+
+.search-empty-state {
+  width: 90%;
+  margin-inline: auto;
+  margin-top: 40px;
+
+  h3 {
+    font-weight: 700;
+    color: $color-text-heading;
+    margin-bottom: 20px;
+
+    @include mobile {
+      font-size: 1.7rem;
+    }
+    @include desktop {
+      font-size: 1.9rem;
+    }
+  }
+  p {
+    color: $color-text-subtitle;
   }
 }
 </style>
