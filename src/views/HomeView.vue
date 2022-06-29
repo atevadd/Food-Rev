@@ -10,9 +10,6 @@ import LoadMore from "../components/ui/LoadMore.vue";
 
 <template>
   <div class="main__content">
-    <!-- <BlogPostSkeleton :amount="16" /> -->
-    <!-- <EmptyState /> -->
-
     <div class="blog-container">
       <BlogPostCard v-for="card in 12" :key="card" />
     </div>

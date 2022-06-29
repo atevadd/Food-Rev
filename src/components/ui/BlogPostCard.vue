@@ -88,9 +88,14 @@
     margin-bottom: 30px;
     color: dodgerblue;
 
+    &:hover > i {
+      transform: translateX(5px);
+    }
+
     i {
       display: inline-block;
       margin-left: 5px;
+      transition: 0.2s ease;
     }
   }
 }
