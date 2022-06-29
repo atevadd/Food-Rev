@@ -6,6 +6,7 @@
         alt="a picture of a meal"
       />
     </router-link>
+    <span class="blog__tag">resturant</span>
     <h1 class="blog__title">
       <router-link to="/">A day in Lagoon resturant</router-link>
     </h1>
@@ -24,6 +25,7 @@
 
 <style lang="scss" scoped>
 .blog {
+  position: relative;
   //   min-height: 400px;
   border: 1px solid $color-border;
   border-radius: 10px;
@@ -38,9 +40,20 @@
       object-fit: cover;
     }
   }
+  &__tag {
+    position: absolute;
+    right: 5px;
+    top: 168px;
+    // background-color: darken($color: $color-secondary, $amount: 10%);
+    background-color: $color-secondary;
+    font-size: 0.78rem;
+    padding: 3px 10px;
+    border-radius: 50px;
+    color: $color-white;
+  }
   &__title {
-    margin-top: 15px;
-    margin-bottom: 10px;
+    margin-top: 18px;
+    margin-bottom: 15px;
     margin-left: 15px;
     line-height: 1.3;
     font-size: 1.5rem;
