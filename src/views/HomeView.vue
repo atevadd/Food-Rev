@@ -1,9 +1,7 @@
 <script setup>
-import BlogPostSkeleton from "../components/loaders/BlogPostSkeleton.vue";
-import { ref } from "vue";
-import LoadMore from "../components/loaders/LoadMore.vue";
-import EmptyState from "../components/EmptyState.vue";
-import AppModal from "../components/AppModal.vue";
+import { onMounted } from "vue";
+import EmptyState from "../components/ui/EmptyState.vue";
+import AppModal from "../components/ui/AppModal.vue";
 import AppInput from "../components/form/AppInput.vue";
 import AppButton from "../components/form/AppButton.vue";
 </script>
@@ -56,6 +54,9 @@ span {
   display: flex;
 
   @include desktop {
+    gap: 20px;
+  }
+  @include tablet {
     gap: 20px;
   }
   @include mobile {

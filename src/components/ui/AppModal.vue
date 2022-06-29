@@ -10,10 +10,18 @@
 </template>
 
 <script setup>
-import { useStore } from "../stores/store.js";
+import { useStore } from "../../stores/store.js";
+import { onMounted } from "vue";
 
 // Store
 const store = useStore();
+
+// Mounted Hook
+onMounted(() => {
+  setTimeout(() => {
+    store.openModal();
+  }, 2000);
+});
 </script>
 
 <style lang="scss" scoped>
@@ -34,7 +42,7 @@ const store = useStore();
     background-color: $color-white;
     border-radius: 5px;
     padding: 30px;
-    // text-align: center;
+    animation: modal 0.6s ease;
 
     @include mobile {
       width: 90%;
@@ -43,7 +51,7 @@ const store = useStore();
       width: 70%;
     }
     @include desktop {
-      width: 40%;
+      width: 30%;
     }
   }
   .btn {

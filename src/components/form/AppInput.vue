@@ -5,6 +5,7 @@
     <label :for="id" v-if="type === 'date'" class="label-date">{{
       labelName
     }}</label>
+
     <input
       :type="type"
       :id="id"
@@ -13,6 +14,7 @@
       required
       autocomplete="false"
     />
+
     <!-- label for other inputs except date -->
     <label
       :for="id"
@@ -65,6 +67,7 @@ defineEmits(["update:modelValue"]);
     padding: 0 10px;
     z-index: 1;
     background: transparent;
+    font-size: 0.85rem;
 
     &:focus-visible {
       border: 1px solid $color-primary;
@@ -78,9 +81,6 @@ defineEmits(["update:modelValue"]);
     &:valid + label {
       top: 0;
     }
-    // &:-internal-autofill-selected {
-    //   background-color: transparent !important;
-    // }
   }
   .label {
     position: absolute;
@@ -94,6 +94,7 @@ defineEmits(["update:modelValue"]);
     padding-inline: 7px;
     font-size: 0.9rem;
     text-transform: capitalize;
+    color: rgb(77, 77, 77);
   }
   .label-date {
     text-transform: capitalize;

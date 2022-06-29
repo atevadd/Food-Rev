@@ -4,7 +4,7 @@ export const useStore = defineStore({
   id: "store",
   state: () => ({
     isLoaderActive: true,
-    isModalActive: true,
+    isModalActive: false,
   }),
   getters: {
     doubleCount: (state) => state.counter * 2,
