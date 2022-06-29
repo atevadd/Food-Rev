@@ -4,13 +4,19 @@ import EmptyState from "../components/ui/EmptyState.vue";
 import AppModal from "../components/ui/AppModal.vue";
 import AppInput from "../components/form/AppInput.vue";
 import AppButton from "../components/form/AppButton.vue";
+import BlogPostCard from "../components/ui/BlogPostCard.vue";
+import LoadMore from "../components/ui/LoadMore.vue";
 </script>
 
 <template>
   <div class="main__content">
     <!-- <BlogPostSkeleton :amount="16" /> -->
-    <EmptyState />
-    <!-- <LoadMore /> -->
+    <!-- <EmptyState /> -->
+
+    <div class="blog-container">
+      <BlogPostCard v-for="card in 12" :key="card" />
+    </div>
+    <LoadMore />
     <app-modal class="get-started">
       <h1>Hi👋🏽, let's get you started</h1>
       <p clal>
@@ -29,6 +35,25 @@ import AppButton from "../components/form/AppButton.vue";
 </template>
 
 <style lang="scss" scoped>
+.blog-container {
+  width: 90%;
+  margin-inline: auto;
+  margin-top: 40px;
+  display: grid;
+
+  @include desktop {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 30px;
+  }
+  @include tablet {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+  }
+  @include mobile {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 30px;
+  }
+}
 span {
   font-size: 1.5rem;
   line-height: 1.5;

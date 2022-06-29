@@ -21,8 +21,7 @@ import AppFooter from "@/components/layout/AppFooter.vue";
 
 .app__content {
   width: 100%;
-
-  // position: relative;
+  position: relative;
   display: grid;
 
   @include desktop {
@@ -41,6 +40,7 @@ import AppFooter from "@/components/layout/AppFooter.vue";
 .app__inner-content {
   position: relative;
   min-height: 100%;
+  background-color: #f4f4f4;
 
   @include mobile {
     margin-bottom: 50px;

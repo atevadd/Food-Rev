@@ -24,7 +24,6 @@ const props = defineProps({
 <style lang="scss" scoped>
 .skeleton {
   width: 90%;
-  //   border: 1px solid red;
   margin-inline: auto;
   margin-top: 40px;
   display: grid;
