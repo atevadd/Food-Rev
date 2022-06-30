@@ -7,6 +7,7 @@ import AppButton from "../components/form/AppButton.vue";
 import BlogPostCard from "../components/ui/BlogPostCard.vue";
 import LoadMore from "../components/ui/LoadMore.vue";
 import { useStore } from "../stores/store.js";
+import AppLoader from "../components/ui/AppLoader.vue";
 
 // Store
 const store = useStore();
@@ -25,21 +26,21 @@ onMounted(() => {
     </div>
     <!-- The load more button -->
     <LoadMore />
-    <app-modal class="get-started">
-      <h1>Hi👋🏽, let's get you started</h1>
-      <p>
-        A quick one before you start reading, help us know you by filling the
-        form below.
-      </p>
-      <form>
-        <div class="grouped">
-          <AppInput type="text" id="name" label-name="What is your name?" />
-          <AppInput type="email" id="email" label-name="What is your email?" />
-        </div>
-        <app-button>Get Started</app-button>
-      </form>
-    </app-modal>
   </div>
+  <app-modal class="get-started">
+    <h1>Hi👋🏽, let's get you started</h1>
+    <p>
+      A quick one before you start reading, help us know you by filling the form
+      below.
+    </p>
+    <form>
+      <div class="grouped">
+        <AppInput type="text" id="name" label-name="What is your name?" />
+        <AppInput type="email" id="email" label-name="What is your email?" />
+      </div>
+      <app-button type="submit">Get Started</app-button>
+    </form>
+  </app-modal>
 </template>
 
 <style lang="scss" scoped>

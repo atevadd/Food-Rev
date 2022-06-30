@@ -19,7 +19,7 @@
     <label
       :for="id"
       class="label"
-      v-if="['text', 'email', 'passoword', 'tel', 'number'].includes(type)"
+      v-if="['text', 'email', 'password', 'tel', 'number'].includes(type)"
       >{{ labelName }}</label
     >
   </div>

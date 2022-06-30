@@ -2,12 +2,17 @@
 import { RouterLink, RouterView } from "vue-router";
 import AppSidebar from "@/components/layout/AppSidebar.vue";
 import AppFooter from "@/components/layout/AppFooter.vue";
+import { useRoute } from "vue-router";
+import AdminSidebar from "./components/layout/AdminSidebar.vue";
+
+const route = useRoute();
 </script>
 
 <template>
   <div class="app__content">
     <!-- App Sidebar -->
-    <AppSidebar />
+    <AdminSidebar v-if="route.name.includes('admin')" />
+    <AppSidebar v-else />
     <!-- Main content -->
     <main class="app__inner-content">
       <RouterView />
@@ -42,7 +47,6 @@ import AppFooter from "@/components/layout/AppFooter.vue";
 .app__inner-content {
   position: relative;
   min-height: 100%;
-  // background-color: #f4f4f4;
 
   @include mobile {
     margin-bottom: 50px;

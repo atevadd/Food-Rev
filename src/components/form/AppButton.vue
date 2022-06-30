@@ -1,8 +1,16 @@
 <template>
-  <button class="btn"><slot></slot></button>
+  <button :type="type" class="btn"><slot></slot></button>
 </template>
 
-<script setup></script>
+<script setup>
+const props = defineProps({
+  type: {
+    type: String,
+    required: false,
+    default: "button",
+  },
+});
+</script>
 
 <style lang="scss" scoped>
 .btn {
@@ -17,7 +25,7 @@
   cursor: pointer;
   outline: none;
   transition: 0.2s ease;
-  letter-spacing: 1.2px;
+  letter-spacing: 1px;
 
   &:hover {
     background-color: darken($color: $color-secondary, $amount: 5%);

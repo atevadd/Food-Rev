@@ -2,7 +2,9 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import SearchView from "../views/SearchView.vue";
 import BookmarkView from "../views/BookmarkView.vue";
-import SettingsView from "../views/SettingsView.vue";
+import AdminHomeView from "../views/Admin/AdminHomeView.vue";
+import LoginView from "../views/Admin/auth/LoginView.vue";
+import ResetPasswordView from "../views/Admin/auth/ResetPasswordView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,9 +25,19 @@ const router = createRouter({
       component: BookmarkView,
     },
     {
-      path: "/settings",
-      name: "settings",
-      component: SettingsView,
+      path: "/admin",
+      name: "admin",
+      component: AdminHomeView,
+    },
+    {
+      path: "/admin/login",
+      name: "admin-login",
+      component: LoginView,
+    },
+    {
+      path: "/admin/reset",
+      name: "admin-reset",
+      component: ResetPasswordView,
     },
   ],
 });
