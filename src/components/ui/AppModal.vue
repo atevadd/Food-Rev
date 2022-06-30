@@ -11,17 +11,9 @@
 
 <script setup>
 import { useStore } from "../../stores/store.js";
-import { onMounted } from "vue";
 
 // Store
 const store = useStore();
-
-// Mounted Hook
-onMounted(() => {
-  setTimeout(() => {
-    store.openModal();
-  }, 2000);
-});
 </script>
 
 <style lang="scss" scoped>

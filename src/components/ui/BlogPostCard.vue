@@ -21,6 +21,7 @@
       >Read more <i class="uil uil-arrow-right"></i
     ></router-link>
 
+    <!-- bookmark button -->
     <button class="blog__bookmark">
       <i class="uil uil-bookmark"></i>
     </button>

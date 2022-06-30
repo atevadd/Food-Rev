@@ -6,6 +6,15 @@ import AppInput from "../components/form/AppInput.vue";
 import AppButton from "../components/form/AppButton.vue";
 import BlogPostCard from "../components/ui/BlogPostCard.vue";
 import LoadMore from "../components/ui/LoadMore.vue";
+import { useStore } from "../stores/store.js";
+
+// Store
+const store = useStore();
+
+// Mounted Hook
+onMounted(() => {
+  store.openModal();
+});
 </script>
 
 <template>
