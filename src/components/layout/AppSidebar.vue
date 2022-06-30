@@ -19,7 +19,7 @@
         </li>
         <li>
           <router-link to="/bookmark"
-            ><i class="uil uil-bookmark"></i>Bookmark</router-link
+            ><i class="uil uil-bookmark"></i>Bookmarks</router-link
           >
         </li>
         <!-- <li>

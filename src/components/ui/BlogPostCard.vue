@@ -8,7 +8,9 @@
     </router-link>
     <span class="blog__tag">resturant</span>
     <h1 class="blog__title">
-      <router-link to="/">A day in Lagoon resturant</router-link>
+      <router-link to="/" title="A day in Lagoon resturant in Nigeria"
+        >A day in Lagoon resturant</router-link
+      >
     </h1>
     <p class="blog__content">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
@@ -18,6 +20,10 @@
     <router-link to="/" class="blog__link"
       >Read more <i class="uil uil-arrow-right"></i
     ></router-link>
+
+    <button class="blog__bookmark">
+      <i class="uil uil-bookmark"></i>
+    </button>
   </div>
 </template>
 
@@ -52,6 +58,7 @@
     color: $color-white;
   }
   &__title {
+    width: 90%;
     margin-top: 18px;
     margin-bottom: 15px;
     margin-left: 15px;
@@ -60,6 +67,12 @@
     color: $color-text-heading;
     font-family: $dm-serif;
     font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
   }
   &__content {
     width: 90%;
@@ -96,6 +109,26 @@
       display: inline-block;
       margin-left: 5px;
       transition: 0.2s ease;
+    }
+  }
+
+  &__bookmark {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    color: $color-white;
+    outline: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    &:active {
+      background-color: rgba($color: #000000, $alpha: 0.6);
+    }
+    &:hover {
+      background-color: rgba($color: #000000, $alpha: 0.6);
     }
   }
 }
