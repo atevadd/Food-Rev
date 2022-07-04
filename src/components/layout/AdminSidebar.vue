@@ -16,14 +16,12 @@
           >
         </li>
         <li>
-          <router-link to="/admin"
+          <router-link to="/s"
             ><i class="uil uil-search"></i>Search</router-link
           >
         </li>
         <li>
-          <router-link to="/admin"
-            ><i class="uil uil-user"></i>Profile</router-link
-          >
+          <router-link to="/s"><i class="uil uil-user"></i>Profile</router-link>
         </li>
         <!-- <li>
           <router-link to="/settings"
@@ -151,17 +149,17 @@
         @include desktop {
           padding: 7px 10px;
           display: block;
-          color: #5a5a5a;
+          color: $color-white;
           border-radius: 5px;
 
           &:hover {
             // background-color: $color-primary;
             // color: $color-white;
-            outline: 1px solid $color-primary;
+            outline: 1px solid $color-white;
           }
           &.router-link-exact-active {
-            background-color: $color-primary;
-            color: $color-white;
+            background-color: $color-white;
+            color: $color-primary;
 
             &:hover {
               outline: none;
