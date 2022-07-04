@@ -34,7 +34,7 @@ const store = useStore();
     background-color: $color-white;
     border-radius: 5px;
     padding: 30px;
-    animation: modal 0.6s ease;
+    animation: modal 0.4s ease;
 
     @include mobile {
       width: 90%;
