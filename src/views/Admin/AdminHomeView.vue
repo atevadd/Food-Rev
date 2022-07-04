@@ -109,7 +109,7 @@ const greeting = () => {
     font-family: $dm-serif;
 
     @include mobile {
-      font-size: 1.6rem;
+      font-size: 1.23rem;
     }
     @include tablet {
       font-size: 1.7rem;
@@ -127,6 +127,8 @@ const greeting = () => {
 
     @include mobile {
       margin-top: 15px;
+      font-size: 0.8rem;
+      padding-inline: 20px;
     }
 
     &:hover {

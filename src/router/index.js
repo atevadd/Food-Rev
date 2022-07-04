@@ -5,6 +5,7 @@ import BookmarkView from "../views/BookmarkView.vue";
 import AdminHomeView from "../views/Admin/AdminHomeView.vue";
 import LoginView from "../views/Admin/auth/LoginView.vue";
 import ResetPasswordView from "../views/Admin/auth/ResetPasswordView.vue";
+import ProfileView from "../views/Admin/ProfileView.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,6 +39,11 @@ const router = createRouter({
       path: "/admin/reset",
       name: "admin-reset",
       component: ResetPasswordView,
+    },
+    {
+      path: "/admin/profile",
+      name: "admin-profile",
+      component: ProfileView,
     },
   ],
 });

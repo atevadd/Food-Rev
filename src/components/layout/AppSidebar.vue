@@ -194,6 +194,7 @@
 
           &.router-link-exact-active {
             color: $color-primary;
+            font-weight: 900;
           }
         }
 

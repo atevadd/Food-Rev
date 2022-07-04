@@ -21,7 +21,9 @@
           >
         </li>
         <li>
-          <router-link to="/s"><i class="uil uil-user"></i>Profile</router-link>
+          <router-link to="/admin/profile"
+            ><i class="uil uil-user"></i>Profile</router-link
+          >
         </li>
         <!-- <li>
           <router-link to="/settings"
@@ -188,6 +190,7 @@
 
           &.router-link-exact-active {
             color: $color-primary;
+            font-weight: 900;
           }
         }
 
