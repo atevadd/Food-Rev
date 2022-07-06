@@ -120,7 +120,7 @@ const greeting = () => {
     display: inline-block;
     background-color: $color-secondary;
     padding: 10px 30px;
-    color: $color-white;
+    color: $color-bg;
     border-radius: 1;
     border-radius: 5px;
     transition: 0.2s ease;
@@ -167,7 +167,7 @@ const greeting = () => {
     font-size: 0.78rem;
     padding: 3px 10px;
     border-radius: 50px;
-    color: $color-white;
+    color: $color-bg;
   }
   &__title {
     width: 90%;
@@ -229,7 +229,7 @@ const greeting = () => {
     top: 10px;
     right: 10px;
     background-color: rgba($color: #000000, $alpha: 0.4);
-    color: $color-white;
+    color: $color-bg;
     outline: none;
     border: none;
     width: 30px;
@@ -294,7 +294,7 @@ const greeting = () => {
     color: $color-text-subtitle;
 
     &.delete {
-      color: $color-white;
+      color: $color-bg;
       background-color: $color-error;
       border-radius: 5px;
 

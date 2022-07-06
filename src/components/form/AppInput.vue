@@ -90,7 +90,7 @@ defineEmits(["update:modelValue"]);
     z-index: 5;
     transition: top 0.2s ease;
     // background-color: transparent;
-    background-color: $color-white;
+    background-color: $color-bg;
     padding-inline: 7px;
     font-size: 0.9rem;
     text-transform: capitalize;

@@ -1,3 +1,23 @@
+:root {
+  // Brand colors
+  --color-primary: #446a46;
+  --color-secondary: #fd5d5d;
+
+  // UI colors
+  --color-bg: #fff;
+  --color-bg-card: #fff;
+  --color-border: #ccc;
+  --color-text-heading: #333;
+  --color-text-subtitle: #5a5a5a;
+
+  // State colors
+  --color-default: #409eff;
+  --color-success: #67c23a;
+  --color-warning: #e6a23c;
+  --color-error: #f56c6c;
+  --color-info: #909399;
+}
+
 /*
   1. Use a more-intuitive box-sizing model.
 */

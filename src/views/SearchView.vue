@@ -74,7 +74,7 @@ const searchText = ref("");
     border-radius: 50px;
     outline: none;
     border: 1px solid $color-border;
-    background-color: $color-white;
+    background-color: $color-bg;
     padding: 0 10px 0 40px;
 
     @include desktop {

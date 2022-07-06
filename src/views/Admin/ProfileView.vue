@@ -66,7 +66,7 @@
       //   border: 2px solid;
       width: 200px;
       height: 200px;
-      background-color: $color-white;
+      background-color: $color-bg;
       border-radius: 50%;
 
       @include mobile {
@@ -80,7 +80,7 @@
         width: 100%;
         height: 100%;
         border-radius: 50%;
-        border: 8px solid $color-white;
+        border: 8px solid $color-bg;
 
         @include mobile {
           margin-inline: auto;
@@ -120,7 +120,7 @@
         padding: 10px 25px;
         background-color: $color-secondary;
         border-radius: 5px;
-        color: $color-white;
+        color: $color-bg;
 
         @include mobile {
           font-size: 0.8rem;

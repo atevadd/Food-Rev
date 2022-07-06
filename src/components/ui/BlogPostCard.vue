@@ -33,10 +33,8 @@
 <style lang="scss" scoped>
 .blog {
   position: relative;
-  //   min-height: 400px;
   border: 1px solid $color-border;
   border-radius: 10px;
-  background-color: #fff;
 
   &__image {
     img {
@@ -56,7 +54,7 @@
     font-size: 0.78rem;
     padding: 3px 10px;
     border-radius: 50px;
-    color: $color-white;
+    color: $color-bg;
   }
   &__title {
     width: 90%;
@@ -118,7 +116,7 @@
     top: 10px;
     right: 10px;
     background-color: rgba($color: #000000, $alpha: 0.4);
-    color: $color-white;
+    color: $color-bg;
     outline: none;
     border: none;
     width: 30px;

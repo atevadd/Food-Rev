@@ -73,7 +73,7 @@
 }
 
 .app__logo {
-  color: $color-white;
+  color: $color-bg;
 
   @include mobile {
     font-size: 1.4rem;
@@ -110,7 +110,7 @@
     width: 100%;
     padding: 10px 0;
     box-shadow: 0 3px 13px rgba($color: #000000, $alpha: 0.2);
-    background-color: $color-white;
+    background-color: $color-bg;
     z-index: 99;
   }
   @include tablet {
@@ -120,7 +120,7 @@
     width: 100%;
     padding: 10px 0;
     box-shadow: 0 3px 13px rgba($color: #000000, $alpha: 0.2);
-    background-color: $color-white;
+    background-color: $color-bg;
     z-index: 99;
   }
   @include desktop {
@@ -151,16 +151,16 @@
         @include desktop {
           padding: 7px 10px;
           display: block;
-          color: $color-white;
+          color: $color-bg;
           border-radius: 5px;
 
           &:hover {
             // background-color: $color-primary;
-            // color: $color-white;
-            outline: 1px solid $color-white;
+            // color: $color-bg;
+            outline: 1px solid $color-bg;
           }
           &.router-link-exact-active {
-            background-color: $color-white;
+            background-color: $color-bg;
             color: $color-primary;
 
             &:hover {

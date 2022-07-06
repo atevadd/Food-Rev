@@ -31,16 +31,25 @@
     </nav>
     <!-- App Theme changer -->
     <div class="app__theme">
-      <span class="theme theme-light"><i class="uil uil-sun"></i> Light</span>
+      <span class="theme theme-light" @click="toggleDark()"
+        ><i class="uil uil-sun"></i> Light</span
+      >
       <span class="theme theme-dark"><i class="uil uil-moon"></i> Dark</span>
     </div>
   </aside>
 </template>
 
-<script setup></script>
+<script setup>
+import { useDark, useToggle } from "@vueuse/core";
+
+const isDark = useDark();
+const toggleDark = useToggle(isDark);
+</script>
 
 <style lang="scss" scoped>
 .app__sidebar {
+  background-color: $color-bg;
+
   @include mobile {
     position: sticky;
     top: 0;
@@ -49,8 +58,8 @@
     justify-content: space-between;
     height: max-content;
     padding: 12px 20px;
-    border-bottom: 1px solid #ccc;
-    background-color: $color-white;
+    border-bottom: 1px solid $color-text-subtitle;
+    // background-color: $color-bg;
     z-index: 99;
   }
   @include tablet {
@@ -62,7 +71,7 @@
     height: max-content;
     padding: 12px 20px;
     border-bottom: 1px solid #ccc;
-    background-color: $color-white;
+    // background-color: $color-bg;
     z-index: 99;
   }
 
@@ -114,7 +123,7 @@
     width: 100%;
     padding: 10px 0;
     box-shadow: 0 3px 13px rgba($color: #000000, $alpha: 0.2);
-    background-color: $color-white;
+    background-color: #1e1e1e;
     z-index: 99;
   }
   @include tablet {
@@ -124,7 +133,7 @@
     width: 100%;
     padding: 10px 0;
     box-shadow: 0 3px 13px rgba($color: #000000, $alpha: 0.2);
-    background-color: $color-white;
+    background-color: $color-bg;
     z-index: 99;
   }
   @include desktop {
@@ -160,12 +169,12 @@
 
           &:hover {
             // background-color: $color-primary;
-            // color: $color-white;
+            // color: $color-bg;
             outline: 1px solid $color-primary;
           }
           &.router-link-exact-active {
             background-color: $color-primary;
-            color: $color-white;
+            color: $color-bg;
 
             &:hover {
               outline: none;

@@ -20,7 +20,7 @@ const props = defineProps({
   border: none;
   border-radius: 5px;
   background-color: $color-secondary;
-  color: $color-white;
+  color: $color-bg;
   margin: 20px 0 0;
   cursor: pointer;
   outline: none;
