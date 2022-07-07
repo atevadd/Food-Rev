@@ -58,7 +58,7 @@ const toggleDark = useToggle(isDark);
     justify-content: space-between;
     height: max-content;
     padding: 12px 20px;
-    border-bottom: 1px solid $color-text-subtitle;
+    border-bottom: 1px solid $color-border;
     // background-color: $color-bg;
     z-index: 99;
   }
@@ -70,7 +70,7 @@ const toggleDark = useToggle(isDark);
     justify-content: space-between;
     height: max-content;
     padding: 12px 20px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid $color-border;
     // background-color: $color-bg;
     z-index: 99;
   }
@@ -82,7 +82,7 @@ const toggleDark = useToggle(isDark);
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    border-right: 1px solid #ccc;
+    border-right: 1px solid $color-border;
   }
 }
 .app__logo {
