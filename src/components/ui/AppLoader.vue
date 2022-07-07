@@ -2,8 +2,7 @@
   <div
     class="app__loader"
     v-show="store.isLoaderActive"
-    @click.self="store.closeLoader"
-  >
+    @click.self="store.closeLoader">
     <div class="loader">
       <div></div>
       <div></div>
@@ -46,7 +45,7 @@ const store = useStore();
 .loader div {
   animation: roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   transform-origin: 40px 40px;
-  background-color: $color-secondary;
+  background-color: var(--color-secondary);
 }
 .loader div:after {
   content: " ";
@@ -55,7 +54,7 @@ const store = useStore();
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: $color-secondary;
+  background-color: var(--color-secondary);
   margin: -4px 0 0 -4px;
 }
 .loader div:nth-child(1) {

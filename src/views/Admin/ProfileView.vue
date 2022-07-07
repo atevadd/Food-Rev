@@ -5,8 +5,7 @@
       <div class="profile__form__avatar">
         <img
           src="https://images.pexels.com/photos/11293709/pexels-photo-11293709.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          alt="Admin profile picture"
-        />
+          alt="Admin profile picture" />
       </div>
       <div class="profile__form__info">
         <div class="profile__form__info__name">
@@ -40,7 +39,7 @@
   &__banner {
     width: 100%;
     height: 20vh;
-    background-color: $color-primary;
+    background-color: var(--color-primary);
   }
   &__form {
     position: relative;
@@ -118,7 +117,7 @@
       .change-password {
         display: inline-block;
         padding: 10px 25px;
-        background-color: $color-secondary;
+        background-color: var(--color-secondary);
         border-radius: 5px;
         color: $color-bg;
 

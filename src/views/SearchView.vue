@@ -5,8 +5,7 @@
       id="search-bar"
       class="search__bar"
       placeholder="Search for a blog..."
-      v-model="searchText"
-    />
+      v-model="searchText" />
     <label for="search-bar"><i class="uil uil-search"></i></label>
   </div>
 
@@ -88,10 +87,10 @@ const searchText = ref("");
     }
 
     &:focus-visible {
-      border: 1px solid $color-primary;
+      border: 1px solid var(--color-primary);
 
       & + label {
-        color: $color-primary;
+        color: var(--color-primary);
       }
     }
   }

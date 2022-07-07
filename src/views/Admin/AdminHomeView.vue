@@ -15,8 +15,7 @@
       <router-link to="/" class="blog__image">
         <img
           src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          alt="a picture of a meal"
-        />
+          alt="a picture of a meal" />
       </router-link>
       <span class="blog__tag">resturant</span>
       <h1 class="blog__title">
@@ -118,7 +117,7 @@ const greeting = () => {
 
   &__cta {
     display: inline-block;
-    background-color: $color-secondary;
+    background-color: var(--color-secondary);
     padding: 10px 30px;
     color: $color-bg;
     border-radius: 1;
@@ -163,7 +162,7 @@ const greeting = () => {
     right: 5px;
     top: 168px;
     // background-color: darken($color: $color-secondary, $amount: 10%);
-    background-color: $color-secondary;
+    background-color: var(--color-secondary);
     font-size: 0.78rem;
     padding: 3px 10px;
     border-radius: 50px;

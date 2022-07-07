@@ -39,7 +39,7 @@
 
 <style lang="scss" scoped>
 .app__sidebar {
-  background-color: $color-primary;
+  background-color: var(--color-primary);
   @include mobile {
     position: sticky;
     top: 0;
@@ -94,7 +94,7 @@
   }
 
   &-dot {
-    color: $color-secondary;
+    color: var(--color-secondary);
     @include desktop {
       font-size: 2.6rem;
       line-height: 1;
@@ -155,13 +155,13 @@
           border-radius: 5px;
 
           &:hover {
-            // background-color: $color-primary;
+            // background-color: var(--color-primary);
             // color: $color-bg;
             outline: 1px solid $color-bg;
           }
           &.router-link-exact-active {
             background-color: $color-bg;
-            color: $color-primary;
+            color: var(--color-primary);
 
             &:hover {
               outline: none;
@@ -177,7 +177,7 @@
           line-height: 1.5;
 
           &.router-link-exact-active {
-            color: $color-primary;
+            color: var(--color-primary);
           }
         }
         @include mobile {
@@ -189,7 +189,7 @@
           line-height: 1.5;
 
           &.router-link-exact-active {
-            color: $color-primary;
+            color: var(--color-primary);
             font-weight: 900;
           }
         }

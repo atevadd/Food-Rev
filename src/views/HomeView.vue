@@ -69,14 +69,14 @@ span {
 }
 .get-started {
   h1 {
-    color: #333;
+    color: $color-text-heading;
 
     @include mobile {
       font-size: 1.5rem;
     }
   }
   p {
-    color: #a3a3a3;
+    color: $color-text-subtitle;
     margin-bottom: 10px;
 
     @include mobile {

@@ -4,14 +4,101 @@
   --color-secondary: #fd5d5d;
 
   // UI colors
+  // #141414
   --color-bg: #fff;
   --color-bg-card: #fff;
   --color-border: #ccc;
   --color-black: #000;
+  --color-skeleton: #dedede;
 
   // Text colors
   --color-text-heading: #333;
   --color-text-subtitle: #5a5a5a;
+  --color-text-label: #4d4d4d;
+
+  // State colors
+  --color-default: #409eff;
+  --color-success: #67c23a;
+  --color-warning: #e6a23c;
+  --color-error: #f56c6c;
+  --color-info: #909399;
+}
+
+// System dark mode
+@media (prefers-color-scheme: dark) {
+  :root {
+    // Brand colors
+    --color-primary: #446a46;
+    --color-secondary: #fd5d5d;
+
+    // UI colors
+    // #141414
+    --color-bg: #141414;
+    --color-bg-card: #2a2929;
+    --color-border: #767676;
+    --color-black: #fff;
+    --color-skeleton: #2a2929;
+
+    // Text colors
+    --color-text-heading: #fff;
+    --color-text-subtitle: #b3b3b3;
+    --color-text-label: #aaaaaa;
+
+    // State colors
+    --color-default: #409eff;
+    --color-success: #67c23a;
+    --color-warning: #e6a23c;
+    --color-error: #f56c6c;
+    --color-info: #909399;
+  }
+}
+
+// System light mode
+@media (prefers-color-scheme: light) {
+  :root {
+    // Brand colors
+    --color-primary: #446a46;
+    --color-secondary: #fd5d5d;
+
+    // UI colors
+    // #141414
+    --color-bg: #fff;
+    --color-bg-card: #fff;
+    --color-border: #ccc;
+    --color-black: #000;
+    --color-skeleton: #dedede;
+
+    // Text colors
+    --color-text-heading: #333;
+    --color-text-subtitle: #5a5a5a;
+    --color-text-label: #4d4d4d;
+
+    // State colors
+    --color-default: #409eff;
+    --color-success: #67c23a;
+    --color-warning: #e6a23c;
+    --color-error: #f56c6c;
+    --color-info: #909399;
+  }
+}
+
+html.dark {
+  // Brand colors
+  --color-primary: #446a46;
+  --color-secondary: #fd5d5d;
+
+  // UI colors
+  // #141414
+  --color-bg: #141414;
+  --color-bg-card: #2a2929;
+  --color-border: #767676;
+  --color-black: #fff;
+  --color-skeleton: #2a2929;
+
+  // Text colors
+  --color-text-heading: #fff;
+  --color-text-subtitle: #b3b3b3;
+  --color-text-label: #aaaaaa;
 
   // State colors
   --color-default: #409eff;
@@ -51,7 +138,7 @@ body {
   // customising the scrollbar for firefox
   scroll-behavior: smooth;
   scrollbar-width: thin;
-  scrollbar-color: $color-primary transparent;
+  scrollbar-color: var(--color-primary) transparent;
   scroll-padding-top: var(--scroll-padding, 79px);
 
   @include mobile {

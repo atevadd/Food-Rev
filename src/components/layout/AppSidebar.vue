@@ -44,6 +44,8 @@ import { useDark, useToggle } from "@vueuse/core";
 
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
+
+console.log(isDark);
 </script>
 
 <style lang="scss" scoped>
@@ -86,7 +88,7 @@ const toggleDark = useToggle(isDark);
   }
 }
 .app__logo {
-  color: $color-primary;
+  color: var(--color-primary);
 
   @include mobile {
     font-size: 1.4rem;
@@ -107,7 +109,7 @@ const toggleDark = useToggle(isDark);
   }
 
   &-dot {
-    color: $color-secondary;
+    color: var(--color-secondary);
     @include desktop {
       font-size: 2.6rem;
       line-height: 1;
@@ -122,7 +124,7 @@ const toggleDark = useToggle(isDark);
     left: 0;
     width: 100%;
     padding: 10px 0;
-    box-shadow: 0 3px 13px rgba($color: #000000, $alpha: 0.2);
+    box-shadow: 0 3px 13px rgba($color: $color-black, $alpha: 0.2);
     background-color: $color-bg;
     z-index: 99;
   }
@@ -132,7 +134,7 @@ const toggleDark = useToggle(isDark);
     left: 0;
     width: 100%;
     padding: 10px 0;
-    box-shadow: 0 3px 13px rgba($color: #000000, $alpha: 0.2);
+    box-shadow: 0 3px 13px rgba($color: $color-black, $alpha: 0.2);
     background-color: $color-bg;
     z-index: 99;
   }
@@ -164,16 +166,16 @@ const toggleDark = useToggle(isDark);
         @include desktop {
           padding: 7px 10px;
           display: block;
-          color: #5a5a5a;
+          color: $color-text-subtitle;
           border-radius: 5px;
 
           &:hover {
-            // background-color: $color-primary;
+            // background-color: var(--color-primary);
             // color: $color-bg;
-            outline: 1px solid $color-primary;
+            outline: 1px solid var(--color-primary);
           }
           &.router-link-exact-active {
-            background-color: $color-primary;
+            background-color: var(--color-primary);
             color: $color-bg;
 
             &:hover {
@@ -190,7 +192,7 @@ const toggleDark = useToggle(isDark);
           line-height: 1.5;
 
           &.router-link-exact-active {
-            color: $color-primary;
+            color: var(--color-primary);
           }
         }
         @include mobile {
@@ -202,7 +204,7 @@ const toggleDark = useToggle(isDark);
           line-height: 1.5;
 
           &.router-link-exact-active {
-            color: $color-primary;
+            color: var(--color-primary);
             font-weight: 900;
           }
         }

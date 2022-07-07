@@ -6,8 +6,7 @@
       :value="modelValue"
       @input="$emit('update:modelValue', $event.target.value)"
       required
-      autocomplete="false"
-    >
+      autocomplete="false">
       <option value="" selected disabled></option>
       <option value="femi">femi</option>
       <option value="ho">ho</option>
@@ -58,11 +57,11 @@ defineEmits(["update:modelValue"]);
     background: transparent;
 
     &:focus-visible {
-      border: 1px solid $color-primary;
+      border: 1px solid var(--color-primary);
 
       & + label {
         top: 0;
-        color: $color-primary;
+        color: var(--color-primary);
       }
     }
 

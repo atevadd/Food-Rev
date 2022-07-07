@@ -12,8 +12,7 @@
       :value="modelValue"
       @input="$emit('update:modelValue', $event.target.value)"
       required
-      autocomplete="false"
-    />
+      autocomplete="false" />
 
     <!-- label for other inputs except date -->
     <label
@@ -63,18 +62,18 @@ defineEmits(["update:modelValue"]);
     height: 45px;
     border-radius: 5px;
     outline: none;
-    border: 1px solid #ccc;
+    border: 1px solid $color-border;
     padding: 0 10px;
     z-index: 1;
     background: transparent;
     font-size: 0.85rem;
 
     &:focus-visible {
-      border: 1px solid $color-primary;
+      border: 1px solid var(--color-primary);
 
       & + label {
         top: 0;
-        color: $color-primary;
+        color: var(--color-primary);
       }
     }
 
@@ -94,7 +93,7 @@ defineEmits(["update:modelValue"]);
     padding-inline: 7px;
     font-size: 0.9rem;
     text-transform: capitalize;
-    color: rgb(77, 77, 77);
+    color: $color-text-label;
   }
   .label-date {
     text-transform: capitalize;

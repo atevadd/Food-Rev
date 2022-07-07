@@ -19,7 +19,7 @@ const props = defineProps({
   padding: 12px 0;
   border: none;
   border-radius: 5px;
-  background-color: $color-secondary;
+  background-color: var(--color-secondary);
   color: $color-bg;
   margin: 20px 0 0;
   cursor: pointer;

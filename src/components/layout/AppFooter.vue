@@ -29,7 +29,7 @@
   }
 }
 .app__logo {
-  color: $color-primary;
+  color: var(--color-primary);
 
   @include mobile {
     font-size: 1.4rem;
@@ -48,7 +48,7 @@
   }
 
   &-dot {
-    color: $color-secondary;
+    color: var(--color-secondary);
     @include desktop {
       font-size: 1.8rem;
       line-height: 1;
