@@ -62,7 +62,7 @@ defineEmits(["update:modelValue"]);
     height: 45px;
     border-radius: 5px;
     outline: none;
-    border: 1px solid $color-border;
+    border: 1px solid var(--color-border);
     padding: 0 10px;
     z-index: 1;
     background: transparent;
@@ -89,11 +89,11 @@ defineEmits(["update:modelValue"]);
     z-index: 5;
     transition: top 0.2s ease;
     // background-color: transparent;
-    background-color: $color-bg;
+    background-color: var(--color-bg);
     padding-inline: 7px;
     font-size: 0.9rem;
     text-transform: capitalize;
-    color: $color-text-label;
+    color: var(--color-text-label);
   }
   .label-date {
     text-transform: capitalize;

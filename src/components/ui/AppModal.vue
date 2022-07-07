@@ -31,7 +31,7 @@ const store = useStore();
 
   &__container {
     position: relative;
-    background-color: $color-bg;
+    background-color: var(--color-bg);
     border-radius: 5px;
     padding: 30px;
     animation: modal 0.4s ease;

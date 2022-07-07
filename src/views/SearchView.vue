@@ -72,7 +72,7 @@ const searchText = ref("");
     height: 45px;
     border-radius: 50px;
     outline: none;
-    border: 1px solid $color-border;
+    border: 1px solid var(--color-border);
     background-color: $color-bg;
     padding: 0 10px 0 40px;
 
@@ -100,7 +100,7 @@ const searchText = ref("");
     transform: translateY(-50%);
     left: 10px;
     font-size: 1.5rem;
-    color: $color-text-subtitle;
+    color: var(--color-text-subtitle);
   }
 }
 
@@ -108,7 +108,7 @@ h1 {
   margin-top: 30px;
   width: 90%;
   margin-inline: auto;
-  border-bottom: 1px solid $color-border;
+  border-bottom: 1px solid var(--color-border);
   color: lighten($color: $color-text-subtitle, $amount: 12%);
   font-weight: 800;
   font-family: $dm-serif;
@@ -129,7 +129,7 @@ h1 {
 
   h3 {
     font-weight: 700;
-    color: $color-text-heading;
+    color: var(--color-text-heading);
     margin-bottom: 20px;
 
     @include mobile {
@@ -140,7 +140,7 @@ h1 {
     }
   }
   p {
-    color: $color-text-subtitle;
+    color: var(--color-text-subtitle);
   }
 }
 </style>

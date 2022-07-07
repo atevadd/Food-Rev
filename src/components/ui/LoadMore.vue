@@ -19,7 +19,7 @@
   &__loadmore {
     display: inline-block;
     margin-inline: auto;
-    border: 1px solid $color-border;
+    border: 1px solid var(--color-border);
     border-radius: 50px;
     padding: 7px 20px;
     color: #858585;

@@ -18,7 +18,7 @@
 #footer {
   width: 100%;
   @include desktop {
-    border-top: 1px solid $color-border;
+    border-top: 1px solid var(--color-border);
     display: flex;
     align-items: center;
     justify-content: space-between;

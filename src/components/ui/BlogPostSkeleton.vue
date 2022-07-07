@@ -43,7 +43,7 @@ const props = defineProps({
 
   &__card {
     min-height: 400px;
-    border: 1px solid $color-border;
+    border: 1px solid var(--color-border);
     border-radius: 10px;
     animation: skeleton 1.5s ease infinite;
   }

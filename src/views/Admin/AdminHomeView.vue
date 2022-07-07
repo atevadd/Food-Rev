@@ -85,7 +85,7 @@ const greeting = () => {
   width: 90%;
   margin: 30px auto;
   background-color: lighten($color: $color-secondary, $amount: 25%);
-  color: $color-text-heading;
+  color: var(--color-text-heading);
   padding: 20px 30px;
   border-radius: 10px;
   display: flex;
@@ -144,7 +144,7 @@ const greeting = () => {
 }
 .blog {
   position: relative;
-  border: 1px solid $color-border;
+  border: 1px solid var(--color-border);
   border-radius: 10px;
   background-color: #fff;
 
@@ -175,7 +175,7 @@ const greeting = () => {
     margin-left: 15px;
     line-height: 1.3;
     font-size: 1.5rem;
-    color: $color-text-heading;
+    color: var(--color-text-heading);
     font-family: $dm-serif;
     font-weight: 600;
     overflow: hidden;
@@ -193,7 +193,7 @@ const greeting = () => {
     margin-left: 15px;
     line-height: 1.3;
     font-size: 0.89rem;
-    color: $color-text-subtitle;
+    color: var(--color-text-subtitle);
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -272,10 +272,10 @@ const greeting = () => {
 // delete modal styling
 .delete-modal {
   h2 {
-    color: $color-text-heading;
+    color: var(--color-text-heading);
   }
   p {
-    color: $color-text-subtitle;
+    color: var(--color-text-subtitle);
   }
   .btns {
     display: flex;
@@ -290,7 +290,7 @@ const greeting = () => {
     outline: none;
     background-color: transparent;
     transition: 0.2s ease;
-    color: $color-text-subtitle;
+    color: var(--color-text-subtitle);
 
     &.delete {
       color: $color-bg;

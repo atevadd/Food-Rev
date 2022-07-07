@@ -103,14 +103,14 @@
 
       h3 {
         font-size: 0.9rem;
-        color: $color-text-subtitle;
+        color: var(--color-text-subtitle);
         font-weight: 400;
         line-height: 1.2;
       }
       span {
         display: block;
         font-size: 1.2rem;
-        color: $color-text-heading;
+        color: var(--color-text-heading);
         font-weight: 700;
         line-height: 1.2;
       }

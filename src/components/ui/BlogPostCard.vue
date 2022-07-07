@@ -32,8 +32,9 @@
 <style lang="scss" scoped>
 .blog {
   position: relative;
-  border: 1px solid $color-border;
+  border: 1px solid var(--color-border);
   border-radius: 10px;
+  background-color: var(--color-bg-card);
 
   &__image {
     img {
@@ -62,7 +63,7 @@
     margin-left: 15px;
     line-height: 1.3;
     font-size: 1.5rem;
-    color: $color-text-heading;
+    color: var(--color-text-heading);
     font-family: $dm-serif;
     font-weight: 600;
     overflow: hidden;
@@ -80,7 +81,7 @@
     margin-left: 15px;
     line-height: 1.3;
     font-size: 0.89rem;
-    color: $color-text-subtitle;
+    color: var(--color-text-subtitle);
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;

@@ -11,8 +11,7 @@
   <div class="bookmark__empty-state" v-else>
     <img
       src="@/assets/images/bookmark-empty.svg"
-      alt="Bookmark empty state image"
-    />
+      alt="Bookmark empty state image" />
     <h1>You currently have no bookmarked blog</h1>
   </div>
 </template>
@@ -36,15 +35,15 @@ const bookmarkStore = useBookmarkStore();
     h1 {
       @include mobile {
         font-size: 1.5rem;
-        color: $color-text-heading;
+        color: var(--color-text-heading);
       }
       @include tablet {
         font-size: 1.5rem;
-        color: $color-text-heading;
+        color: var(--color-text-heading);
       }
       @include desktop {
         font-size: 1.9rem;
-        color: $color-text-heading;
+        color: var(--color-text-heading);
       }
     }
   }
@@ -107,7 +106,7 @@ const bookmarkStore = useBookmarkStore();
   h1 {
     text-align: center;
     margin-top: 20px;
-    color: $color-text-heading;
+    color: var(--color-text-heading);
 
     @include desktop {
       font-size: 1.7rem;

@@ -47,10 +47,10 @@ import AppButton from "../../../components/form/AppButton.vue";
     }
   }
   h1 {
-    color: $color-text-heading;
+    color: var(--color-text-heading);
   }
   p {
-    color: $color-text-subtitle;
+    color: var(--color-text-subtitle);
   }
 }
 </style>
