@@ -163,18 +163,17 @@ onMounted(() => {
     }
 
     li {
-      transition: none !important;
       @include desktop {
         margin-bottom: 30px;
       }
 
       a {
-        color: var(--color-text-subtitle);
+        color: $color-white;
 
         @include desktop {
           padding: 7px 10px;
           display: block;
-          color: var(--color-bg);
+          // color: var(--color-bg);
           border-radius: 5px;
 
           &:hover {
