@@ -67,6 +67,7 @@ defineEmits(["update:modelValue"]);
     z-index: 1;
     background: transparent;
     font-size: 0.85rem;
+    color: var(--color-text-subtitle);
 
     &:focus-visible {
       border: 1px solid var(--color-primary);
