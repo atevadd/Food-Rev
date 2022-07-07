@@ -32,10 +32,30 @@
         </li> -->
       </ul>
     </nav>
+
+    <!-- App Theme changer -->
+    <div class="app__theme">
+      <span class="theme theme-dark" @click="toggleDark()" v-if="isDark"
+        ><i class="uil uil-moon"></i> Dark</span
+      >
+      <span class="theme theme-light" @click="toggleDark()" v-else
+        ><i class="uil uil-sun"></i> Light</span
+      >
+    </div>
   </aside>
 </template>
 
-<script setup></script>
+<script setup>
+import { useDark, useToggle } from "@vueuse/core";
+import { onMounted } from "vue";
+
+const isDark = useDark();
+const toggleDark = useToggle(isDark);
+
+onMounted(() => {
+  console.log(isDark.value);
+});
+</script>
 
 <style lang="scss" scoped>
 .app__sidebar {
@@ -68,7 +88,7 @@
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    border-right: 1px solid #ccc;
+    border-right: 1px solid var(--color-border);
   }
 }
 
@@ -110,7 +130,7 @@
     width: 100%;
     padding: 10px 0;
     box-shadow: 0 3px 13px rgba($color: #000000, $alpha: 0.2);
-    background-color: $color-bg;
+    background-color: var(--color-bg);
     z-index: 99;
   }
   @include tablet {
@@ -120,7 +140,7 @@
     width: 100%;
     padding: 10px 0;
     box-shadow: 0 3px 13px rgba($color: #000000, $alpha: 0.2);
-    background-color: $color-bg;
+    background-color: var(--color-bg);
     z-index: 99;
   }
   @include desktop {
@@ -143,24 +163,27 @@
     }
 
     li {
+      transition: none !important;
       @include desktop {
         margin-bottom: 30px;
       }
 
       a {
+        color: var(--color-text-subtitle);
+
         @include desktop {
           padding: 7px 10px;
           display: block;
-          color: $color-bg;
+          color: var(--color-bg);
           border-radius: 5px;
 
           &:hover {
             // background-color: var(--color-primary);
-            // color: $color-bg;
-            outline: 1px solid $color-bg;
+            // color: var(--color-bg);
+            outline: 1px solid var(--color-bg);
           }
           &.router-link-exact-active {
-            background-color: $color-bg;
+            background-color: var(--color-bg);
             color: var(--color-primary);
 
             &:hover {
@@ -207,6 +230,60 @@
             margin-right: 15px;
           }
         }
+      }
+    }
+  }
+}
+
+.app__theme {
+  .theme {
+    color: $color-white;
+  }
+  @include mobile {
+    .theme {
+      border-radius: 10px;
+      padding: 5px 10px;
+      background-color: rgba($color: #000, $alpha: 0.2);
+      font-size: 0.8rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba($color: #000, $alpha: 0.4);
+      }
+
+      i {
+        display: inline-block;
+        margin-right: 7px;
+      }
+    }
+  }
+  @include tablet {
+    .theme {
+      border-radius: 10px;
+      padding: 5px 10px;
+      // background-color: rgba($color: #000, $alpha: 0.2);
+      font-size: 0.8rem;
+      cursor: pointer;
+
+      i {
+        display: inline-block;
+        margin-right: 7px;
+      }
+    }
+  }
+  @include desktop {
+    margin-top: auto;
+    margin-bottom: 30px;
+    width: 70%;
+
+    .theme {
+      border-radius: 10px;
+      padding: 5px 10px;
+      cursor: pointer;
+
+      i {
+        display: inline-block;
+        margin-right: 7px;
       }
     }
   }

@@ -22,8 +22,8 @@ const store = useStore();
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
   background-color: rgba($color: #000000, $alpha: 0.85);
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,9 +61,12 @@ const store = useStore();
     border: none;
     cursor: pointer;
     transition: 0.3s ease;
+    background-color: var(--color-bg);
+    color: var(--color-text-heading);
 
     &:hover {
-      background-color: #ccc;
+      background-color: var(--color-bg);
+      color: var(--color-text-heading);
     }
     i {
       line-height: 1;

@@ -85,7 +85,7 @@ const greeting = () => {
   width: 90%;
   margin: 30px auto;
   background-color: lighten($color: $color-secondary, $amount: 25%);
-  color: var(--color-text-heading);
+  color: $color-text-heading;
   padding: 20px 30px;
   border-radius: 10px;
   display: flex;
@@ -146,7 +146,7 @@ const greeting = () => {
   position: relative;
   border: 1px solid var(--color-border);
   border-radius: 10px;
-  background-color: #fff;
+  background-color: var(--color-bg-card);
 
   &__image {
     img {

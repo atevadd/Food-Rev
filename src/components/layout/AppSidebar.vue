@@ -22,11 +22,6 @@
             ><i class="uil uil-bookmark"></i>Bookmarks</router-link
           >
         </li>
-        <!-- <li>
-          <router-link to="/settings"
-            ><i class="uil uil-setting"></i>Settings</router-link
-          >
-        </li> -->
       </ul>
     </nav>
     <!-- App Theme changer -->
@@ -66,7 +61,6 @@ onMounted(() => {
     height: max-content;
     padding: 12px 20px;
     border-bottom: 1px solid var(--color-border);
-    // background-color: var(--color-bg);
     z-index: 99;
   }
   @include tablet {
@@ -177,13 +171,11 @@ onMounted(() => {
           border-radius: 5px;
 
           &:hover {
-            // background-color: var(--color-primary);
-            // color: var(--color-bg);
             outline: 1px solid var(--color-primary);
           }
           &.router-link-exact-active {
             background-color: var(--color-primary);
-            color: var(--color-bg);
+            color: $color-white;
 
             &:hover {
               outline: none;
