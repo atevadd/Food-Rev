@@ -123,7 +123,7 @@ const toggleDark = useToggle(isDark);
     width: 100%;
     padding: 10px 0;
     box-shadow: 0 3px 13px rgba($color: #000000, $alpha: 0.2);
-    background-color: #1e1e1e;
+    background-color: $color-bg;
     z-index: 99;
   }
   @include tablet {
