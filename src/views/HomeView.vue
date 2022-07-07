@@ -22,11 +22,11 @@ onMounted(() => {
 <template>
   <div class="main__content">
     <!-- All the blog on the app -->
-    <!-- <div class="blog-container">
-      <BlogPostCard v-for="card in 12" :key="card" />
-    </div> -->
+    <div class="blog-container">
+      <BlogPostCard v-for="card in 12" :key="card" :id="card" />
+    </div>
     <!-- The load more button -->
-    <BlogPostSkeleton />
+    <!-- <BlogPostSkeleton /> -->
     <LoadMore />
   </div>
   <app-modal class="get-started">
