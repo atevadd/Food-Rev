@@ -3,7 +3,8 @@
     <router-link to="/" class="blog__image">
       <img
         src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        alt="a picture of a meal" />
+        alt="a picture of a meal"
+        loading="lazy" />
     </router-link>
     <span class="blog__tag">resturant</span>
     <h1 class="blog__title">

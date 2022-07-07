@@ -72,7 +72,7 @@ const greeting = () => {
 
   if (time < 12) {
     return "Good morning";
-  } else if (time >= 12 && time <= 18) {
+  } else if (time >= 12 && time <= 16) {
     return "Good afternoon";
   } else {
     return "Good evening";

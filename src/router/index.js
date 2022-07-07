@@ -5,7 +5,8 @@ import BookmarkView from "../views/BookmarkView.vue";
 import AdminHomeView from "../views/Admin/AdminHomeView.vue";
 import LoginView from "../views/Admin/auth/LoginView.vue";
 import ResetPasswordView from "../views/Admin/auth/ResetPasswordView.vue";
-import ProfileView from "../views/Admin/ProfileView.vue"
+import ProfileView from "../views/Admin/ProfileView.vue";
+import BlogView from "../views/BlogView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -44,6 +45,11 @@ const router = createRouter({
       path: "/admin/profile",
       name: "admin-profile",
       component: ProfileView,
+    },
+    {
+      path: "/blog/:id",
+      name: "blog",
+      component: BlogView,
     },
   ],
 });

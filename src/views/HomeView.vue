@@ -8,6 +8,7 @@ import BlogPostCard from "../components/ui/BlogPostCard.vue";
 import LoadMore from "../components/ui/LoadMore.vue";
 import { useStore } from "../stores/store.js";
 import AppLoader from "../components/ui/AppLoader.vue";
+import BlogPostSkeleton from "../components/ui/BlogPostSkeleton.vue";
 
 // Store
 const store = useStore();
@@ -21,10 +22,11 @@ onMounted(() => {
 <template>
   <div class="main__content">
     <!-- All the blog on the app -->
-    <div class="blog-container">
+    <!-- <div class="blog-container">
       <BlogPostCard v-for="card in 12" :key="card" />
-    </div>
+    </div> -->
     <!-- The load more button -->
+    <BlogPostSkeleton />
     <LoadMore />
   </div>
   <app-modal class="get-started">

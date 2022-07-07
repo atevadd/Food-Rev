@@ -50,13 +50,13 @@ const props = defineProps({
   .img {
     width: 100%;
     height: 180px;
-    background-color: $color-skeleton;
+    background-color: var(--color-skeleton);
     border-radius: 10px 10px 0 0;
   }
   .title {
     width: 70%;
     height: 25px;
-    background-color: $color-skeleton;
+    background-color: var(--color-skeleton);
     margin-top: 40px;
     margin-bottom: 20px;
     margin-left: 10px;
@@ -64,7 +64,7 @@ const props = defineProps({
   .content {
     width: 70%;
     height: 10px;
-    background-color: $color-skeleton;
+    background-color: var(--color-skeleton);
     margin-top: 20px;
     margin-left: 10px;
     margin-right: auto;
@@ -85,7 +85,7 @@ const props = defineProps({
   .link {
     width: 20%;
     height: 20px;
-    background-color: $color-skeleton;
+    background-color: var(--color-skeleton);
     margin-top: 40px;
     margin-left: 10px;
     margin-right: auto;
