@@ -132,6 +132,7 @@ const props = defineProps({
     width: 30px;
     height: 30px;
     border-radius: 50%;
+    cursor: pointer;
 
     &:active {
       background-color: rgba($color: #000000, $alpha: 0.6);

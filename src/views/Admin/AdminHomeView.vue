@@ -12,14 +12,16 @@
   </header>
   <div class="blog-container">
     <div class="blog" v-for="blog in 20" :key="blog">
-      <router-link to="/" class="blog__image">
+      <router-link :to="'/blog/' + blog" class="blog__image">
         <img
           src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt="a picture of a meal" />
       </router-link>
       <span class="blog__tag">resturant</span>
       <h1 class="blog__title">
-        <router-link to="/" title="A day in Lagoon resturant in Nigeria"
+        <router-link
+          :to="'/blog/' + blog"
+          title="A day in Lagoon resturant in Nigeria"
           >A day in Lagoon resturant</router-link
         >
       </h1>
@@ -28,7 +30,7 @@
         itaque quidem modi debitis culpa pariatur! Eius doloribus beatae
         accusantium neque!
       </p>
-      <router-link to="/" class="blog__link"
+      <router-link :to="'/blog/' + blog" class="blog__link"
         >Read more <i class="uil uil-arrow-right"></i
       ></router-link>
 
@@ -234,6 +236,7 @@ const greeting = () => {
     width: 30px;
     height: 30px;
     border-radius: 50%;
+    cursor: pointer;
 
     &:active {
       background-color: rgba($color: #000000, $alpha: 0.6);

@@ -118,7 +118,7 @@ h1 {
   }
 
   span {
-    color: darken($color: $color-text-heading, $amount: 10%);
+    color: var(--color-text-heading);
   }
 }
 
