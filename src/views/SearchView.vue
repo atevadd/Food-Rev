@@ -14,7 +14,7 @@
       Results for <span>{{ searchText }}</span>
     </h1>
     <div class="blog-container">
-      <BlogPostCard v-for="card in 4" :key="card" />
+      <BlogPostCard v-for="card in 4" :key="card" :id="card" />
     </div>
   </div>
   <div class="search-empty-state" v-else>
