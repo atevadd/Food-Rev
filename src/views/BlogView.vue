@@ -206,11 +206,10 @@ const textarea = ref(null);
 const commentBtn = ref(null);
 
 const removeDisabled = () => {
-  if (document.querySelector("textarea").value > 0) {
+  if (document.querySelector("textarea").value.length > 0) {
     document.querySelector(".comment-btn").removeAttribute("disabled");
   } else {
     document.querySelector(".comment-btn").setAttribute("disabled", "true");
-    document.querySelector(".comment-btn").removeAttribute("disabled");
   }
 };
 
