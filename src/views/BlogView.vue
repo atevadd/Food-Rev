@@ -200,7 +200,7 @@
 import { ref, onMounted } from "vue";
 import AppButton from "../components/form/AppButton.vue";
 
-const comments = ref([1, 2, 3]);
+const comments = ref([]);
 
 const textarea = ref(null);
 const commentBtn = ref(null);
