@@ -154,13 +154,22 @@
                 id=""
                 cols="30"
                 rows="10"
-                placeholder="what are your thought?"></textarea>
-              <app-button type="submit" class="comment-btn">Comment</app-button>
+                placeholder="what are your thought?"
+                required
+                ref="textarea"
+                @keyup="removeDisabled"></textarea>
+              <app-button
+                type="submit"
+                class="comment-btn"
+                ref="commentBtn"
+                disabled
+                >Comment</app-button
+              >
             </div>
           </form>
         </div>
 
-        <div class="blogpage__comment-list">
+        <div class="blogpage__comment-list" v-if="comments.length > 0">
           <h2>Latest comment</h2>
           <hr />
           <div
@@ -180,15 +189,34 @@
             </div>
           </div>
         </div>
+
+        <div class="blogpage__comment-empty" v-else>No comment</div>
       </section>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+import AppButton from "../components/form/AppButton.vue";
 
-const comments = ref([1, 2]);
+const comments = ref([1, 2, 3]);
+
+const textarea = ref(null);
+const commentBtn = ref(null);
+
+const removeDisabled = () => {
+  if (document.querySelector("textarea").value > 0) {
+    document.querySelector(".comment-btn").removeAttribute("disabled");
+  } else {
+    document.querySelector(".comment-btn").setAttribute("disabled", "true");
+    document.querySelector(".comment-btn").removeAttribute("disabled");
+  }
+};
+
+onMounted(() => {
+  // console.log(textarea.value, commentBtn);
+});
 </script>
 
 <style lang="scss" scoped>
@@ -199,9 +227,7 @@ const comments = ref([1, 2]);
 
   .blogpage__header {
     position: relative;
-
     display: flex;
-    // border: 1px solid red;
 
     @include desktop {
       width: 60%;
@@ -342,13 +368,14 @@ const comments = ref([1, 2]);
           outline: none;
           box-shadow: 0 0 13px var(--color-border);
 
-          // &:focus-visible {
-          //   border: 1px solid var(--color-secondary);
-          // }
+          &:focus-visible {
+            border: 1px solid var(--color-secondary);
+          }
         }
 
         .comment-btn {
           position: absolute;
+          width: max-content;
           bottom: 20px;
           right: 10px;
           background-color: var(--color-secondary);
@@ -356,6 +383,7 @@ const comments = ref([1, 2]);
           padding: 7px 15px;
           border-radius: 5px;
           cursor: pointer;
+          font-size: 0.9rem;
 
           &:disabled {
             background-color: lighten($color: $color-secondary, $amount: 20%);
@@ -411,6 +439,14 @@ const comments = ref([1, 2]);
         }
       }
     }
+  }
+
+  .blogpage__comment-empty {
+    margin: 30px 0;
+    width: 100%;
+    color: var(--color-text-heading);
+    text-align: center;
+    font-size: 1.5rem;
   }
 }
 </style>

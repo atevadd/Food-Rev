@@ -1,5 +1,5 @@
 <template>
-  <button :type="type" class="btn" disabled><slot></slot></button>
+  <button :type="type" class="btn"><slot></slot></button>
 </template>
 
 <script setup>
@@ -25,7 +25,7 @@ const props = defineProps({
   cursor: pointer;
   outline: none;
   transition: 0.2s ease;
-  letter-spacing: 1px;
+  // letter-spacing: 1px;
 
   &:hover {
     background-color: darken($color: $color-secondary, $amount: 5%);

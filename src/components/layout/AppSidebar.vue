@@ -38,14 +38,9 @@
 
 <script setup>
 import { useDark, useToggle } from "@vueuse/core";
-import { onMounted } from "vue";
 
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
-
-onMounted(() => {
-  console.log(isDark.value);
-});
 </script>
 
 <style lang="scss" scoped>
