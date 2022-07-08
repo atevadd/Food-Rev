@@ -386,6 +386,7 @@ onMounted(() => {
 
           &:disabled {
             background-color: lighten($color: $color-secondary, $amount: 20%);
+            cursor: not-allowed;
           }
         }
       }
