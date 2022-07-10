@@ -16,7 +16,7 @@
           >
         </li>
         <li>
-          <router-link to="/s"
+          <router-link to="/admin/search"
             ><i class="uil uil-search"></i>Search</router-link
           >
         </li>
@@ -129,7 +129,7 @@ onMounted(() => {
     left: 0;
     width: 100%;
     padding: 10px 0;
-    box-shadow: 0 3px 13px rgba($color: #000000, $alpha: 0.2);
+    box-shadow: 0 3px 13px rgba($color: #626262, $alpha: 0.2);
     background-color: var(--color-bg);
     z-index: 99;
   }
@@ -168,7 +168,7 @@ onMounted(() => {
       }
 
       a {
-        color: $color-white;
+        color: var(--color-text-subtitle);
 
         @include desktop {
           padding: 7px 10px;

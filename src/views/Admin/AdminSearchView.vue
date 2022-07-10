@@ -24,9 +24,8 @@
 </template>
 
 <script setup>
-import AppInput from "../components/form/AppInput.vue";
-import { useStore } from "../stores/store.js";
-import BlogPostCard from "../components/ui/BlogPostCard.vue";
+import { useStore } from "../../stores/store.js";
+import BlogPostCard from "../../components/ui/BlogPostCard.vue";
 import { ref } from "vue";
 
 const store = useStore();

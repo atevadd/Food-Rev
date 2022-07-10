@@ -65,7 +65,7 @@
       //   border: 2px solid;
       width: 200px;
       height: 200px;
-      background-color: $color-bg;
+      background-color: transparent;
       border-radius: 50%;
 
       @include mobile {
@@ -79,7 +79,7 @@
         width: 100%;
         height: 100%;
         border-radius: 50%;
-        border: 8px solid $color-bg;
+        border: 8px solid var(--color-bg);
 
         @include mobile {
           margin-inline: auto;
