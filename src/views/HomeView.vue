@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted } from "vue";
+import { ref, onMounted } from "vue";
 import EmptyState from "../components/ui/EmptyState.vue";
 import AppModal from "../components/ui/AppModal.vue";
 import AppInput from "../components/form/AppInput.vue";
@@ -15,8 +15,40 @@ const store = useStore();
 
 // Mounted Hook
 onMounted(() => {
-  store.openModal();
+  if (localStorage.getItem("food-rev-user-data") !== null) {
+    store.userData = JSON.parse(localStorage.getItem("food-rev-user-data"));
+    store.closeModal();
+  } else {
+    store.openModal();
+  }
 });
+
+// Get started form variables
+const userName = ref("");
+const userEmail = ref("");
+
+const userData = ref({
+  userName: "",
+  userEmail: "",
+});
+
+// submit get started form
+const submitGetStartedForm = () => {
+  // checking the locastorage for the user data
+  const userExist = localStorage.getItem("food-rev-user-data");
+
+  // if user data does not exist then update the user data
+  if (userExist == null) {
+    localStorage.setItem("food-rev-user-data", JSON.stringify(userData.value));
+
+    store.userData = JSON.parse(localStorage.getItem("food-rev-user-data"));
+
+    store.closeModal();
+  } else {
+    // if user data exist then update the user data
+    store.userData = JSON.parse(localStorage.getItem("food-rev-user-data"));
+  }
+};
 </script>
 
 <template>
@@ -35,10 +67,18 @@ onMounted(() => {
       A quick one before you start reading, help us know you by filling the form
       below.
     </p>
-    <form>
+    <form @submit.prevent="submitGetStartedForm">
       <div class="grouped">
-        <AppInput type="text" id="name" label-name="What is your name?" />
-        <AppInput type="email" id="email" label-name="What is your email?" />
+        <AppInput
+          type="text"
+          id="name"
+          label-name="What is your name?"
+          v-model="userData.userName" />
+        <AppInput
+          type="email"
+          id="email"
+          label-name="What is your email?"
+          v-model="userData.userEmail" />
       </div>
       <app-button type="submit">Get Started</app-button>
     </form>

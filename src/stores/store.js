@@ -6,6 +6,7 @@ export const useStore = defineStore({
     isLoaderActive: true,
     isModalActive: false,
     searchResult: [],
+    userData: {},
   }),
   getters: {
     getSearchResult() {
