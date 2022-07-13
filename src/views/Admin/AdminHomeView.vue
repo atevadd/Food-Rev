@@ -6,7 +6,7 @@
       <span v-else-if="greeting().includes('afternoon')">🌞</span>
       <span v-else>🌙</span>, Chinyere
     </h1>
-    <router-link to="/admin" class="page-banner__cta"
+    <router-link to="/admin/createnewblog" class="page-banner__cta"
       >Write new post</router-link
     >
   </header>

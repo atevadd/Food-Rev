@@ -168,7 +168,7 @@ onMounted(() => {
       }
 
       a {
-        color: var(--color-text-subtitle);
+        color: $color-white;
 
         @include desktop {
           padding: 7px 10px;
@@ -209,6 +209,7 @@ onMounted(() => {
           justify-content: center;
           font-size: 0.8rem;
           line-height: 1.5;
+          color: var(--color-text-subtitle);
 
           &.router-link-exact-active {
             color: var(--color-primary);
