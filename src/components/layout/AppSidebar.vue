@@ -65,7 +65,7 @@ const toggleDark = useToggle(isDark);
     align-items: center;
     justify-content: space-between;
     height: max-content;
-    padding: 12px 20px;
+    padding: 12px 30px;
     border-bottom: 1px solid var(--color-border);
     // background-color: var(--color-bg);
     z-index: 99;

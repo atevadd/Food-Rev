@@ -124,6 +124,7 @@ body {
   --scroll-padding: 79px;
   // customising the scrollbar for firefox
   scroll-behavior: smooth;
+  scrollbar-track-color: var(--color-secondary);
   scrollbar-width: thin;
   scrollbar-color: var(--color-primary) transparent;
   scroll-padding-top: var(--scroll-padding, 79px);

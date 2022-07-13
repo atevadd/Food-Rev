@@ -25,11 +25,6 @@
             ><i class="uil uil-user"></i>Profile</router-link
           >
         </li>
-        <!-- <li>
-          <router-link to="/settings"
-            ><i class="uil uil-setting"></i>Settings</router-link
-          >
-        </li> -->
       </ul>
     </nav>
 
@@ -47,14 +42,9 @@
 
 <script setup>
 import { useDark, useToggle } from "@vueuse/core";
-import { onMounted } from "vue";
 
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
-
-onMounted(() => {
-  console.log(isDark.value);
-});
 </script>
 
 <style lang="scss" scoped>
