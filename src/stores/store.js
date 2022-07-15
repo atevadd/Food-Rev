@@ -3,7 +3,7 @@ import { defineStore } from "pinia";
 export const useStore = defineStore({
   id: "store",
   state: () => ({
-    isLoaderActive: true,
+    isLoaderActive: false,
     isModalActive: false,
     searchResult: [],
     userData: {},

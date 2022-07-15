@@ -6,8 +6,9 @@ import router from "./router";
 import CKEditor from "@ckeditor/ckeditor5-vue";
 
 // Axios Config
-Axios.defaults.baseURL = "https://api.example.com";
+Axios.defaults.baseURL = "https://food-rev-api.herokuapp.com/";
 Axios.defaults.headers.common["Content-Type"] = "application/json";
+Axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
 
 const app = createApp(App);
 

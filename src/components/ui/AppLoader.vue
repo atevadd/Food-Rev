@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="app__loader"
-    v-show="store.isLoaderActive"
-    @click.self="store.closeLoader">
+  <div class="app__loader" v-show="store.isLoaderActive">
     <div class="loader">
       <div></div>
       <div></div>
