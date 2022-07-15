@@ -25,6 +25,11 @@
             ><i class="uil uil-user"></i>Profile</router-link
           >
         </li>
+        <li>
+          <router-link to="/"
+            ><i class="uil uil-sign-out-alt"></i>Logout</router-link
+          >
+        </li>
       </ul>
     </nav>
 

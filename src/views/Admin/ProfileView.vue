@@ -30,7 +30,21 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { onMounted } from "vue";
+import { useRouter } from "vue-router";
+import { useAuthStore } from "../../stores/auth";
+
+const auth = useAuthStore();
+const router = useRouter();
+
+// check if admin is logged in
+onMounted(() => {
+  if (auth.isAdmin == false) {
+    router.push({ name: "admin-login" });
+  }
+});
+</script>
 
 <style lang="scss" scoped>
 .profile {

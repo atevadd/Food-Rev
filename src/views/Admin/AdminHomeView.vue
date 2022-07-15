@@ -65,8 +65,13 @@
 import BlogPostCard from "../../components/ui/BlogPostCard.vue";
 import AppModal from "../../components/ui/AppModal.vue";
 import { useStore } from "../../stores/store";
+import { useAuthStore } from "../../stores/auth";
+import { onMounted } from "vue";
+import { useRoute, useRouter } from "vue-router";
 
 const store = useStore();
+const auth = useAuthStore();
+const router = useRouter();
 
 // Return a greeting based on the time of the day
 const greeting = () => {
@@ -80,6 +85,12 @@ const greeting = () => {
     return "Good evening";
   }
 };
+
+onMounted(() => {
+  if (auth.isAdmin == false) {
+    router.push({ name: "admin-login" });
+  }
+});
 </script>
 
 <style lang="scss" scoped>

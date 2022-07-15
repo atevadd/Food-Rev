@@ -25,13 +25,24 @@
 
 <script setup>
 import { useStore } from "../../stores/store.js";
+import { useAuthStore } from "../../stores/auth.js";
 import BlogPostCard from "../../components/ui/BlogPostCard.vue";
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+import { useRouter } from "vue-router";
 
 const store = useStore();
+const auth = useAuthStore();
+const router = useRouter();
 
 // Search text
 const searchText = ref("");
+
+// check if admin is logged in
+onMounted(() => {
+  if (auth.isAdmin == false) {
+    router.push({ name: "admin-login" });
+  }
+});
 </script>
 
 <style lang="scss" scoped>
