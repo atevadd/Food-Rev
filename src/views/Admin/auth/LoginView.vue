@@ -86,6 +86,7 @@ const loginAdmin = () => {
 
 onMounted(() => {
   auth.isLoggedIn = false;
+  auth.isAdmin = false;
 });
 </script>
 
