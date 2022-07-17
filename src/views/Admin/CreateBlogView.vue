@@ -22,17 +22,29 @@
 
 <script setup>
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import AppInput from "../../components/form/AppInput.vue";
 import AppButton from "../../components/form/AppButton.vue";
-// import { VueEditor } from "vue2-editor";
+import { useRouter } from "vue-router";
+import { useAuthStore } from "../../stores/auth";
 
 const editor = ClassicEditor;
 const editorData = ref("");
+const router = useRouter();
+const auth = useAuthStore();
 
 const printData = () => {
   console.log(editorData);
 };
+
+// check if admin is logged in
+onMounted(() => {
+  if (auth.isLoggedIn == false) {
+    router.push({ name: "admin-login" });
+  } else {
+    router.push({ name: "create-new-blog" });
+  }
+});
 </script>
 
 <style lang="scss" scoped>

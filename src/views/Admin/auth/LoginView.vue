@@ -32,6 +32,8 @@ import { useAuthStore } from "../../../stores/auth";
 import { useStore } from "../../../stores/store";
 import Axios from "axios";
 import { useRouter } from "vue-router";
+import { checkCookie } from "../../../assets/js/helpers";
+import { onMounted } from "vue";
 
 const auth = useAuthStore();
 const store = useStore();
@@ -44,22 +46,52 @@ const loginAdmin = () => {
 
   Axios.post("/login", auth.adminLoginDetails)
     .then((res) => {
-      console.log(res);
+      // set login status
+      auth.isLoggedIn = true;
+      auth.isAdmin = res.data.user.role === "admin" ? true : false;
+      // Checks if cookie exists and if it does, sets the cookie
+      checkCookie("food-rev-token", res.data.token, 5);
+      // Store user data in store
+      store.userData = res.data.user;
+      // Hide app loader
       store.closeLoader();
+      // redirect to admin dashboard
       router.push({ name: "admin" });
+
+      // Clear the admin login details
+      auth.adminLoginDetails = {
+        email: "",
+        password: "",
+      };
     })
     .catch((err) => {
-      // changing the login error in the state
-      auth.setLoginError(err.message, true);
+      // set admin login status to false
+      auth.isLoggedIn = false;
+      // hide app loader
       store.closeLoader();
+
+      try {
+        if (err.response.data.errors[0].param === "email") {
+          auth.setLoginError("Email is incorrect", true);
+        }
+      } catch {
+        if (err.response.data.message === "Invaild credetials") {
+          auth.setLoginError("Password is incorrect", true);
+        } else {
+          auth.setLoginError("Something went wrong", true);
+        }
+      }
     });
 };
+
+onMounted(() => {
+  auth.isLoggedIn = false;
+});
 </script>
 
 <style lang="scss" scoped>
 .login {
   width: 100%;
-
   display: flex;
   align-items: center;
   justify-content: center;

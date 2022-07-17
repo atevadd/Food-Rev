@@ -11,7 +11,7 @@ const route = useRoute();
 <template>
   <div class="app__content">
     <!-- App Sidebar -->
-    <AdminSidebar v-if="route.name.includes('admin')" />
+    <AdminSidebar v-if="route.path.includes('admin')" />
     <AppSidebar v-else />
     <!-- Main content -->
     <main class="app__inner-content">

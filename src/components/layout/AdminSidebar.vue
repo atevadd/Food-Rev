@@ -25,8 +25,8 @@
             ><i class="uil uil-user"></i>Profile</router-link
           >
         </li>
-        <li>
-          <router-link to="/"
+        <li v-if="auth.isLoggedIn">
+          <router-link :to="{ name: 'admin-login' }"
             ><i class="uil uil-sign-out-alt"></i>Logout</router-link
           >
         </li>
@@ -47,7 +47,9 @@
 
 <script setup>
 import { useDark, useToggle } from "@vueuse/core";
+import { useAuthStore } from "../../stores/auth";
 
+const auth = useAuthStore();
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
 </script>

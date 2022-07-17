@@ -5,6 +5,7 @@ export const useAuthStore = defineStore({
   id: "auth",
   state: () => ({
     isAdmin: false,
+    isLoggedIn: false,
     adminLoginDetails: {
       email: "",
       password: "",

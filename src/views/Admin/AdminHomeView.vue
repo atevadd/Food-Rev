@@ -4,7 +4,7 @@
       {{ greeting() }}
       <span v-if="greeting().includes('morning')">🌅</span>
       <span v-else-if="greeting().includes('afternoon')">🌞</span>
-      <span v-else>🌙</span>, Chinyere
+      <span v-else>🌙</span>, {{ store.userData.first_name }}
     </h1>
     <router-link to="/admin/createnewblog" class="page-banner__cta"
       >Write new post</router-link
@@ -87,8 +87,10 @@ const greeting = () => {
 };
 
 onMounted(() => {
-  if (auth.isAdmin == false) {
+  if (auth.isLoggedIn == false) {
     router.push({ name: "admin-login" });
+  } else {
+    router.push({ name: "admin" });
   }
 });
 </script>

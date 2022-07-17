@@ -9,16 +9,20 @@
       </div>
       <div class="profile__form__info">
         <div class="profile__form__info__name">
-          <h3>Full name</h3>
-          <span>John</span>
+          <h3>First name</h3>
+          <span>{{ store.userData.first_name }}</span>
+        </div>
+        <div class="profile__form__info__name">
+          <h3>Last name</h3>
+          <span>{{ store.userData.last_name }}</span>
         </div>
         <div class="profile__form__info__email">
           <h3>Email</h3>
-          <span>John</span>
+          <span>{{ store.userData.email }}</span>
         </div>
         <div class="profile__form__info__role">
           <h3>Role</h3>
-          <span>Admin</span>
+          <span>{{ store.userData.role }}</span>
         </div>
         <div class="profile__form__">
           <router-link to="/admin/reset" class="change-password"
@@ -34,14 +38,18 @@
 import { onMounted } from "vue";
 import { useRouter } from "vue-router";
 import { useAuthStore } from "../../stores/auth";
+import { useStore } from "../../stores/store";
 
 const auth = useAuthStore();
 const router = useRouter();
+const store = useStore();
 
 // check if admin is logged in
 onMounted(() => {
-  if (auth.isAdmin == false) {
+  if (auth.isLoggedIn == false) {
     router.push({ name: "admin-login" });
+  } else {
+    router.push({ name: "admin-profile" });
   }
 });
 </script>
@@ -127,6 +135,7 @@ onMounted(() => {
         color: var(--color-text-heading);
         font-weight: 700;
         line-height: 1.2;
+        text-transform: capitalize;
       }
       .change-password {
         display: inline-block;

@@ -39,8 +39,10 @@ const searchText = ref("");
 
 // check if admin is logged in
 onMounted(() => {
-  if (auth.isAdmin == false) {
+  if (auth.isLoggedIn == false) {
     router.push({ name: "admin-login" });
+  } else {
+    router.push({ name: "admin-search" });
   }
 });
 </script>
