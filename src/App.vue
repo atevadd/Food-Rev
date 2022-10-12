@@ -30,7 +30,7 @@ const route = useRoute();
   display: grid;
 
   @include desktop {
-    grid-template-columns: minmax(0, 15%) minmax(0, 85%);
+    grid-template-columns: minmax(0, 20%) minmax(0, 80%);
     min-height: 100vh;
     align-items: flex-start;
   }

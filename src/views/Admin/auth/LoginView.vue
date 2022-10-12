@@ -32,7 +32,7 @@ import { useAuthStore } from "../../../stores/auth";
 import { useStore } from "../../../stores/store";
 import Axios from "axios";
 import { useRouter } from "vue-router";
-import { checkCookie } from "../../../assets/js/helpers";
+import { setCookie } from "../../../assets/js/helpers";
 import { onMounted } from "vue";
 
 const auth = useAuthStore();
@@ -49,8 +49,9 @@ const loginAdmin = () => {
       // set login status
       auth.isLoggedIn = true;
       auth.isAdmin = res.data.user.role === "admin" ? true : false;
+      auth.token = res.data.token;
       // Checks if cookie exists and if it does, sets the cookie
-      checkCookie("food-rev-token", res.data.token, 5);
+      setCookie("food-rev-token", res.data.token, 5);
       // Store user data in store
       store.userData = res.data.user;
       // Hide app loader

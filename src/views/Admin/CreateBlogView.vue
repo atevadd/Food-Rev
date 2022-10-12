@@ -9,6 +9,7 @@
         <label for="blog-content">Blog Content</label>
         <ckeditor
           :editor="editor"
+          :config="{ config }"
           v-model="editorData"
           id="blog-content"></ckeditor>
       </div>
@@ -27,6 +28,8 @@ import AppInput from "../../components/form/AppInput.vue";
 import AppButton from "../../components/form/AppButton.vue";
 import { useRouter } from "vue-router";
 import { useAuthStore } from "../../stores/auth";
+import axios from "axios";
+import { getCookie } from "../../assets/js/helpers";
 
 const editor = ClassicEditor;
 const editorData = ref("");
@@ -35,6 +38,41 @@ const auth = useAuthStore();
 
 const printData = () => {
   console.log(editorData);
+};
+
+const uploadAdapter = (loader) => {
+  return {
+    upload: () => {
+      return new Promise((resolve, reject) => {
+        const body = new FormData();
+        loader.file.then((file) => {
+          body.append("uploading", file);
+          axios
+            .post("admin/upload", body, {
+              headers: {
+                Authorization: `Bearer ${getCookie("food-rev-token")}`,
+              },
+            })
+            .then((response) => {
+              resolve({ default: `${response.data.url}` });
+            })
+            .catch((error) => {
+              reject(error);
+            });
+        });
+      });
+    },
+  };
+};
+
+const uploadPlugin = (editor) => {
+  editor.plugins.get("FileRepository").createUploadAdapter = (loader) => {
+    return uploadAdapter(loader);
+  };
+};
+
+const config = {
+  extraPlugins: [uploadPlugin],
 };
 
 // check if admin is logged in

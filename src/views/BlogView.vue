@@ -329,6 +329,7 @@ onMounted(() => {
     p {
       color: var(--color-text-subtitle);
       line-height: 1.8;
+      text-align: justify;
     }
   }
 
@@ -365,7 +366,7 @@ onMounted(() => {
           color: var(--color-text-subtitle);
           background-color: transparent;
           outline: none;
-          box-shadow: 0 0 13px var(--color-border);
+          // box-shadow: 0 0 13px var(--color-border);
 
           &:focus-visible {
             border: 1px solid var(--color-secondary);

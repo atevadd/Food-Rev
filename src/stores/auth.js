@@ -10,6 +10,7 @@ export const useAuthStore = defineStore({
       email: "",
       password: "",
     },
+    token: "",
     loginError: {
       status: false,
       message: "",

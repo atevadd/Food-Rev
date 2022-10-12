@@ -43,7 +43,7 @@ const store = useStore();
       width: 70%;
     }
     @include desktop {
-      width: 30%;
+      width: 40%;
     }
   }
   .btn {

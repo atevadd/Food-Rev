@@ -93,11 +93,11 @@ const submitGetStartedForm = () => {
   display: grid;
 
   @include desktop {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 30px;
   }
   @include tablet {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 30px;
   }
   @include mobile {
